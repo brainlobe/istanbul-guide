@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Istanbul Curated: 7-Day Family Guide — Moroccan Family Edition</title>
+  <style>
+    :root {
+      --bg: #F5F5F7;
+      --surface: #FFFFFF;
+      --ink: #1D1D1F;
+      --secondary: #6E6E73;
+      --border: #E5E5EA;
+      --blue: #0071E3;
+      --blue-hover: #0077ED;
+      --green: #1D7D46;
+      --amber-bg: #FFF8EB;
+      --amber-ink: #9A5B00;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-pill: 999px;
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro Arabic", "Geeza Pro", "Segoe UI", Tahoma, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+    }
+
+    html[dir="rtl"] {
+      line-height: 1.7;
+    }
+
+    body {
+      padding-bottom: 80px;
+    }
+
+    /* Sticky Apple Frosted Glass Bar */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.84);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+
+    .nav-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--secondary);
+      text-decoration: none;
+      padding: 6px 11px;
+      border-radius: var(--radius-pill);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .nav-link:hover {
+      color: var(--ink);
+      background: rgba(0, 0, 0, 0.04);
+    }
+
+    .controls-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* Segmented Controls (Language & Season) */
+    .segmented {
+      display: inline-flex;
+      background: #E8E8ED;
+      padding: 3px;
+      border-radius: var(--radius-pill);
+    }
+
+    .seg-btn {
+      border: none;
+      background: transparent;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .seg-btn.active {
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Centered Hero */
+    .hero {
+      text-align: center;
+      padding: 44px 0 32px;
+    }
+
+    .hero-eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 4.8vw, 46px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.12;
+      margin-bottom: 12px;
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      color: var(--secondary);
+      max-width: 640px;
+      margin: 0 auto 22px;
+    }
+
+    /* Spotlight Search */
+    .search-wrap {
+      max-width: 460px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 14px;
+      color: var(--ink);
+      box-shadow: var(--shadow);
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .search-input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+    }
+
+    /* Section Spacing & Headers */
+    section {
+      padding-top: 40px;
+      scroll-margin-top: 76px;
+    }
+
+    .section-head {
+      margin-bottom: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .section-head h2 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .section-head p {
+      font-size: 14px;
+      color: var(--secondary);
+    }
+
+    /* Pill Tabs */
+    .pill-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      scrollbar-width: none;
+    }
+    .pill-bar::-webkit-scrollbar { display: none; }
+
+    .pill-tab {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--ink);
+      padding: 9px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .pill-tab:hover {
+      border-color: var(--secondary);
+    }
+    .pill-tab.active {
+      background: var(--ink);
+      color: #FFFFFF;
+      border-color: var(--ink);
+    }
+
+    /* Bento Cards */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    /* Day Itinerary Card */
+    .day-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .day-title {
+      font-size: 23px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+    }
+
+    .day-sub {
+      font-size: 14px;
+      color: var(--secondary);
+      margin-top: 2px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--blue);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    .btn-primary:hover {
+      background: var(--blue-hover);
+    }
+
+    .btn-soft {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--bg);
+      color: var(--ink);
+      text-decoration: none;
+      padding: 6px 13px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    .btn-soft:hover {
+      background: #E5E5EA;
+    }
+
+    .btn-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .btn-link:hover {
+      text-decoration: underline;
+    }
+
+    /* 3 Spec Pills inside Day Card */
+    .spec-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .spec-box {
+      background: var(--bg);
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+    }
+
+    .spec-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--secondary);
+      display: block;
+    }
+
+    .spec-value {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-top: 2px;
+    }
+
+    /* Timeline Rows */
+    .stop-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .stop-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .stop-main {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      max-width: 680px;
+    }
+
+    .stop-time {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--blue);
+      background: rgba(0, 113, 227, 0.08);
+      padding: 4px 9px;
+      border-radius: 8px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .stop-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .stop-desc {
+      font-size: 13px;
+      color: var(--secondary);
+      margin-top: 2px;
+    }
+
+    .stop-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Badges & Tags */
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: var(--bg);
+      color: var(--secondary);
+    }
+
+    .tag-green {
+      background: #E8F5E9;
+      color: var(--green);
+    }
+
+    .tag-amber {
+      background: var(--amber-bg);
+      color: var(--amber-ink);
+    }
+
+    /* Clean Bullet Lists */
+    .clean-list {
+      list-style: none;
+      margin: 14px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .clean-list li {
+      font-size: 13px;
+      color: var(--secondary);
+      padding-inline-start: 14px;
+      position: relative;
+    }
+
+    .clean-list li::before {
+      content: "•";
+      color: var(--blue);
+      font-weight: bold;
+      position: absolute;
+      inset-inline-start: 0;
+    }
+
+    /* Dark Apple Callout Banner */
+    .dark-banner {
+      background: var(--ink);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      margin-bottom: 16px;
+    }
+
+    .dark-banner h3 {
+      font-size: 21px;
+      font-weight: 700;
+      margin: 6px 0 8px;
+    }
+
+    .dark-banner p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Checklist Rows */
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      background: var(--bg);
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s ease;
+    }
+    .check-item:hover {
+      background: #EAEAEF;
+    }
+    .check-item input {
+      margin-top: 4px;
+      width: 17px;
+      height: 17px;
+      accent-color: var(--blue);
+      cursor: pointer;
+    }
+    .check-item.done .check-title {
+      text-decoration: line-through;
+      color: var(--secondary);
+    }
+    .check-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .check-desc {
+      font-size: 12px;
+      color: var(--secondary);
+    }
+
+    /* Toast */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      inset-inline-end: 24px;
+      background: var(--ink);
+      color: #FFFFFF;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 100;
+    }
+    #toast.show {
+      opacity: 1;
+    }
+
+    @media print {
+      .top-nav, .search-wrap, .pill-bar, .stop-actions { display: none !important; }
+      body { background: #FFFFFF; }
+      .card { box-shadow: none; border: 1px solid #CCC; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Frosted Navigation Bar -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <a href="#" class="brand" id="ui-brand">Istanbul Family Guide</a>
+
+      <div class="nav-links">
+        <a href="#itinerary" class="nav-link" id="nav-itinerary">7-Day Plan</a>
+        <a href="#stay" class="nav-link" id="nav-stay">Where to Stay</a>
+        <a href="#shopping" class="nav-link" id="nav-shopping">Shopping</a>
+        <a href="#transit" class="nav-link" id="nav-transit">Transit & Maps</a>
+        <a href="#safety" class="nav-link" id="nav-safety">Safety & Checklist</a>
+      </div>
+
+      <div class="controls-group">
+        <!-- Language Switcher: English | Français | المغربية -->
+        <div class="segmented" role="group" aria-label="Language Switcher">
+          <button type="button" id="lang-en" class="seg-btn active" onclick="setLanguage('en')">
+            English
+          </button>
+          <button type="button" id="lang-fr" class="seg-btn" onclick="setLanguage('fr')">
+            Français
+          </button>
+          <button type="button" id="lang-ma" class="seg-btn" onclick="setLanguage('ma')">
+            المغربية
+          </button>
+        </div>
+
+        <!-- Season Switcher -->
+        <div class="segmented" role="group" aria-label="Season Switcher">
+          <button type="button" id="btn-winter" class="seg-btn active" onclick="setSeason('winter')">
+            ❄️ Winter / Snow Edition
+          </button>
+          <button type="button" id="btn-spring" class="seg-btn" onclick="setSeason('spring')">
+            🌸 Spring / Blossom Edition
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <header class="hero">
+      <p class="hero-eyebrow" id="ui-eyebrow">The Curated Moroccan Family Edition · Stroller-Safe · 100% Halal</p>
+      <h1 id="ui-hero-title">Istanbul Curated: 7-Day Family Guide</h1>
+      <p class="hero-sub" id="season-summary"></p>
+
+      <div class="search-wrap">
+        <input
+          type="search"
+          id="search-input"
+          class="search-input"
+          placeholder="Quick search (e.g. kumpir, gold, leather, stroller, M2, pharmacy)..."
+          oninput="handleSearch(this.value)"
+        />
+      </div>
+      <div id="search-results" style="display:none; margin-top: 16px; text-align: start;"></div>
+    </header>
+
+    <!-- 1. INTERACTIVE 7-DAY ITINERARY -->
+    <section id="itinerary">
+      <div class="section-head">
+        <div>
+          <h2 id="ui-sec1-title">7-Day Itinerary</h2>
+          <p id="ui-sec1-sub">Tap a day below. Day 7 adapts automatically to your Winter or Spring toggle.</p>
+        </div>
+      </div>
+
+      <div class="pill-bar" id="day-tabs"></div>
+      <div id="day-card-container"></div>
+    </section>
+
+    <!-- 2. WHERE TO STAY (BASE CAMPS) -->
+    <section id="stay">
+      <div class="section-head">
+        <div>
+          <h2 id="ui-sec2-title">Where to Stay</h2>
+          <p id="ui-sec2-sub">Three family-friendly neighborhoods compared by stroller terrain and transit.</p>
+        </div>
+      </div>
+
+      <div class="grid-3" id="stay-grid"></div>
+    </section>
+
+    <!-- 3. FILTERABLE SHOPPING DIRECTORY -->
+    <section id="shopping">
+      <div class="section-head">
+        <div>
+          <h2 id="ui-sec3-title">Shopping Directory</h2>
+          <p id="ui-sec3-sub">Filter across luxury malls, family malls, wholesale cotton slopes, and verified Grand Bazaar artisans.</p>
+        </div>
+      </div>
+
+      <div class="pill-bar" id="shop-tabs"></div>
+      <div class="grid-2" id="shop-grid"></div>
+    </section>
+
+    <!-- 4. TRANSIT MATRIX & OFFICIAL PORTALS -->
+    <section id="transit">
+      <div class="section-head">
+        <div>
+          <h2 id="ui-sec4-title">Transit & Istanbulkart Rules</h2>
+          <p id="ui-sec4-sub">Stroller-safe rail lines, roll-on ferries, essential apps, and official timetables.</p>
+        </div>
+      </div>
+
+      <div class="dark-banner">
+        <span class="tag" style="background:rgba(255,255,255,0.15); color:#FFF;" id="ui-kart-tag">Golden Transit Rule</span>
+        <h3 id="ui-kart-title">ONE card covers the entire family — tap sequentially for each member.</h3>
+        <p id="ui-kart-desc">
+          Buy one anonymous Istanbulkart at any yellow/blue Biletmatik kiosk. Tap once for Parent 1 and roll the stroller through the wide gate, then pass the same card back for Parent 2. <strong>Children under 6 ride 100% free.</strong>
+        </p>
+      </div>
+
+      <div class="grid-2" style="margin-bottom:16px;" id="transit-cards"></div>
+
+      <div class="grid-2">
+        <!-- Apps -->
+        <div class="card">
+          <h3 style="font-size:17px; font-weight:700; margin-bottom:12px;" id="ui-apps-title">Essential Mobile Apps</h3>
+          <div style="display:flex; flex-direction:column; gap:10px; font-size:13px;" id="apps-list"></div>
+        </div>
+
+        <!-- Official Portals -->
+        <div class="card">
+          <h3 style="font-size:17px; font-weight:700; margin-bottom:12px;" id="ui-portals-title">Official Transit Portals</h3>
+          <div style="display:flex; flex-direction:column; gap:10px; font-size:13px;">
+            <a class="btn-link" href="https://www.metro.istanbul/en/YolcuHizmetleri/AgHaritalari" target="_blank" rel="noopener">Metro Istanbul Network Map ↗</a>
+            <a class="btn-link" href="https://www.sehirhatlari.istanbul/en" target="_blank" rel="noopener">Şehir Hatları Ferry Timetables ↗</a>
+            <a class="btn-link" href="https://istanbulkart.istanbul/" target="_blank" rel="noopener">Official Istanbulkart Info ↗</a>
+            <a class="btn-link" href="https://budo.burulas.com.tr/" target="_blank" rel="noopener">BUDO Bursa Ferry Booking ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SAFETY, PEDIATRIC PHARMACY, HALAL & CHECKLIST -->
+    <section id="safety">
+      <div class="section-head">
+        <div>
+          <h2 id="ui-sec5-title">Family Care & Pre-Departure Checklist</h2>
+          <p id="ui-sec5-sub">Pediatric duty pharmacies, halal dining assurance, cobblestone tips, and booking reminders.</p>
+        </div>
+        <button class="btn-soft" onclick="window.print()" id="ui-print-btn">🖨️ Print / Save PDF</button>
+      </div>
+
+      <div class="grid-3" style="margin-bottom:16px;" id="safety-cards"></div>
+
+      <!-- Interactive Checklist -->
+      <div class="card">
+        <h3 style="font-size:19px; font-weight:700; margin-bottom:14px;" id="ui-check-heading">Pre-Departure Booking Checklist</h3>
+        <div class="grid-2" id="checklist-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast">Copied to clipboard</div>
+
+  <script>
+    let currentLang = 'en';
+    let currentSeason = 'winter';
+    let currentDay = 1;
+    let currentShopCat = 'All';
+
+    const I18N = {
+      en: {
+        brand: "Istanbul Family Guide",
+        nav: ["7-Day Plan", "Where to Stay", "Shopping", "Transit & Maps", "Safety & Checklist"],
+        winterBtn: "❄️ Winter / Snow Edition",
+        springBtn: "🌸 Spring / Blossom Edition",
+        eyebrow: "The Curated Moroccan Family Edition · Stroller-Safe · 100% Halal",
+        heroTitle: "Istanbul Curated: 7-Day Family Guide",
+        seasonSummary: {
+          winter: "Winter Edition: Heated Bosphorus ferries, covered bazaars, and a snow cable-car excursion to Mount Uludağ in Bursa.",
+          spring: "Spring Edition: Blooming tulips in Emirgan & Gülhane parks, mild Bosphorus breezes, and forest stream dining in Sapanca & Maşukiye."
+        },
+        searchPlaceholder: "Quick search (e.g. kumpir, gold, leather, stroller, M2, pharmacy)...",
+        sec1Title: "7-Day Itinerary",
+        sec1Sub: "Tap a day below. Day 7 adapts automatically to your Winter or Spring toggle.",
+        sec2Title: "Where to Stay",
+        sec2Sub: "Three family-friendly neighborhoods compared by stroller terrain and transit.",
+        sec3Title: "Shopping Directory",
+        sec3Sub: "Filter across luxury malls, family malls, wholesale cotton slopes, and verified Grand Bazaar artisans.",
+        sec4Title: "Transit & Istanbulkart Rules",
+        sec4Sub: "Stroller-safe rail lines, roll-on ferries, essential apps, and official timetables.",
+        sec5Title: "Family Care & Pre-Departure Checklist",
+        sec5Sub: "Pediatric duty pharmacies, halal dining assurance, cobblestone tips, and booking reminders.",
+        printBtn: "🖨️ Print / Save PDF",
+        routeBtn: "Google Maps Direction ↗",
+        specBestTime: "Best time to visit",
+        specStroller: "Stroller friendliness",
+        specKids: "Kids tip",
+        copyBtn: "Copy",
+        copyTaxiBtn: "Copy Taxi Pin",
+        copyAddrBtn: "Copy Address",
+        copiedToast: "Copied: ",
+        mapBtn: "Map ↗",
+        gmapsBtn: "Google Maps ↗",
+        dayLabel: "Day",
+        snowShort: " · Snow",
+        springShort: " · Spring",
+        kartTag: "Golden Transit Rule",
+        kartTitle: "ONE card covers the entire family — tap sequentially for each member.",
+        kartDesc: "Buy one anonymous Istanbulkart at any yellow/blue Biletmatik kiosk. Tap once for Parent 1 and roll the stroller through the wide gate, then pass the same card back for Parent 2. <strong>Children under 6 ride 100% free.</strong>",
+        appsTitle: "Essential Mobile Apps",
+        portalsTitle: "Official Transit Portals",
+        checkHeading: "Pre-Departure Booking Checklist",
+        shopCats: {
+          "All": "All",
+          "Luxury Malls": "Luxury Malls",
+          "Family & High-Street": "Family & High-Street",
+          "Wholesale Textiles": "Wholesale Textiles",
+          "Grand Bazaar Artisans": "Grand Bazaar Artisans"
+        },
+        baseCamps: [
+          {
+            badge: "Best All-Rounder & Walkability · 9.5/10 Stroller",
+            name: "Beşiktaş",
+            sub: "Akaretler · Vişnezade · Yıldız",
+            bullets: [
+              "Flat coastal walks from Dolmabahçe Palace to Ortaköy.",
+              "Direct roll-on ferries to Kadıköy & Üsküdar (Asian side).",
+              "Next to Yıldız Park (shaded kids play zones & ponds)."
+            ],
+            pin: "Beşiktaş İskelesi, Akaretler, İstanbul",
+            url: "https://www.google.com/maps/search/?api=1&query=Akaretler+Besiktas+Istanbul"
+          },
+          {
+            badge: "Transit & Infrastructure Hub · 9.0/10 Stroller",
+            name: "Gayrettepe / Balmumcu",
+            sub: "Zorlu Center Hub",
+            bullets: [
+              "Direct underground weather-proof tunnel to M2 Green Line.",
+              "Full elevator access and Zorlu Center luxury mall & kids park.",
+              "Modern high-rise serviced family apartments with kitchens."
+            ],
+            pin: "Zorlu Center, Gayrettepe, Beşiktaş",
+            url: "https://www.google.com/maps/search/?api=1&query=Zorlu+Center+Istanbul"
+          },
+          {
+            badge: "Leafy Residential Luxury · 7.8/10 Stroller",
+            name: "Ulus / Etiler",
+            sub: "Ulus Park · Nispetiye",
+            bullets: [
+              "Calm, upscale hillside retreat with panoramic Bosphorus views.",
+              "Close to Ulus Park cafés and Akmerkez shopping mall.",
+              "Requires short BiTaksi/Uber hops or Levent M2 Metro to Old City."
+            ],
+            pin: "Ulus Parkı, Beşiktaş, İstanbul",
+            url: "https://www.google.com/maps/search/?api=1&query=Ulus+Parki+Istanbul"
+          }
+        ],
+        transitCards: [
+          {
+            tag: "Low-Floor Curb Boarding",
+            title: "T1 Tram & F1/F2 Funiculars",
+            desc: "<strong>T1 Tram</strong> connects Kabataş, Karaköy, Eminönü, Sultanahmet, and Grand Bazaar with zero steps. Use <strong>F1 (Kabataş–Taksim)</strong> and <strong>F2 Tünel (Karaköy–Galata)</strong> funiculars to skip steep hills in 90 seconds."
+          },
+          {
+            tag: "Elevators & Roll-On Decks",
+            title: "M2 Metro & Şehir Hatları Ferries",
+            desc: "<strong>M2 Green Line</strong> has street-to-platform elevators to Cevahir (Şişli), Zorlu (Gayrettepe), Kanyon (Levent), and İstinyePark. <strong>Şehir Hatları Ferries</strong> allow strollers to roll straight onto the lower deck."
+          }
+        ],
+        apps: [
+          { name: "BiTaksi & Uber", desc: "Licensed yellow/turquoise taxis & black Vito vans", label: "BiTaksi ↗", url: "https://www.bitaksi.com/en/" },
+          { name: "Getir", desc: "15-min delivery of diapers, formula, milk & snacks to hotel", label: "Getir ↗", url: "https://getir.com/en/" },
+          { name: "Citymapper & Google Maps", desc: "Live rail/ferry routing (enable Wheelchair mode)", label: "Citymapper ↗", url: "https://citymapper.com/istanbul" }
+        ],
+        safetyCards: [
+          {
+            tagClass: "tag-amber",
+            tag: "Emergency: Call 112",
+            title: "24/7 Duty Pharmacy (Nöbetçi Eczane)",
+            desc: "Look for the red <strong>\"E\" (Eczane)</strong> sign for pediatric fever syrups (Calpol/Dolven) and saline. After 19:00 and on Sundays, every closed pharmacy displays a lit screen showing the nearest open 24h <strong>Nöbetçi Eczane</strong>.",
+            linkLabel: "Live Nöbetçi Eczane Finder ↗",
+            linkUrl: "https://www.istanbuleczaciodasi.org.tr/nobetci-eczane/"
+          },
+          {
+            tagClass: "tag-green",
+            tag: "100% Halal Verified",
+            title: "Halal Dining & Prayer Rooms",
+            desc: "All standard meats in Turkey are <strong>100% halal</strong> by default. Alcohol-free family classics include <strong>Tarihi Sultanahmet Köftecisi</strong>, <strong>Emirgan Sütiş</strong>, <strong>Çiya Sofrası</strong>, and <strong>Karaköy Güllüoğlu</strong>. All major malls have clean <strong>Mescit</strong> prayer rooms & nursing suites."
+          },
+          {
+            tagClass: "",
+            tag: "Stroller Advice",
+            title: "Cobblestones & Slopes",
+            desc: "Lock your stroller's front swivel wheels on Sultanahmet cobblestones. Enter the Grand Bazaar via flat <strong>Gate 47 (Nuruosmaniye)</strong>, walk Mahmutpaşa slope <em>downhill</em> toward Eminönü, and bring a baby carrier for inside Ayasofya."
+          }
+        ],
+        checklist: [
+          { title: "Reserve Dolmabahçe & Topkapı (+ Harem) Tickets", desc: "Pre-book with audio guides to skip morning ticket queues." },
+          { title: "Secure Timed-Entry Slot for Galata Tower", desc: "Book Day 5 afternoon elevator slot in advance." },
+          { title: "Winter Option: Book Round-Trip BUDO Ferry to Bursa", desc: "Eminönü/Kabataş ↔ Mudanya catamaran for Mount Uludağ snow day." },
+          { title: "Spring Option: Book Private Mercedes Vito Van to Sapanca", desc: "1.5-hour door-to-door family transfer to Ormanya, Maşukiye & Sapanca." }
+        ],
+        days: [
+          {
+            day: 1,
+            title: "Day 1: Coastal Settle-In & Ortaköy Shoreline",
+            subtitle: "Ortaköy Promenade · Büyük Mecidiye Mosque · Baked Kumpir · Akaretler Dinner",
+            bestTime: "14:30 – 20:30",
+            stroller: "9.5/10 — Completely flat waterfront paving",
+            kidsTip: "Let kids choose toppings at the Ortaköy Kumpir stalls & watch ferries pass the mosque.",
+            routeUrl: "https://www.google.com/maps/dir/Besiktas+Meydan,+Istanbul/Ortakoy+Mosque,+Istanbul/Akaretler+Siraevler,+Istanbul",
+            stops: [
+              { time: "14:00", name: "Arrival & Base Camp Check-In", desc: "Settle into Beşiktaş, Gayrettepe, or Ulus; order water, milk & diapers via Getir in 15 mins.", pin: "Beşiktaş Meydan, İstanbul", url: "https://www.google.com/maps/search/?api=1&query=Besiktas+Istanbul" },
+              { time: "16:00", name: "Ortaköy Shoreline Walk & Büyük Mecidiye Mosque", desc: "Flat stroller walk along the Bosphorus plaza beneath the bridge; visit the waterfront mosque.", pin: "Büyük Mecidiye Camii, Ortaköy", url: "https://www.google.com/maps/search/?api=1&query=Buyuk+Mecidiye+Mosque+Ortakoy+Istanbul" },
+              { time: "17:15", name: "Ortaköy Baked Kumpir & Waffles", desc: "Share a hot butter-and-kaşar baked potato loaded with corn, olives, and halal sausage by the water.", pin: "Ortaköy Kumpircileri, Beşiktaş", url: "https://www.google.com/maps/search/?api=1&query=Ortakoy+Kumpir+Istanbul" },
+              { time: "19:00", name: "Family Dinner in Akaretler", desc: "Relaxed halal family dinner along the illuminated historic row houses of Akaretler.", pin: "Akaretler Sıraevler, Beşiktaş", url: "https://www.google.com/maps/search/?api=1&query=Akaretler+Siraevler+Besiktas+Istanbul" }
+            ]
+          },
+          {
+            day: 2,
+            title: "Day 2: Sultanahmet Core & Gülhane Gardens",
+            subtitle: "Ayasofya · Blue Mosque · Tarihi Sultanahmet Köftecisi · Grand Bazaar · Gülhane Park",
+            bestTime: "09:00 – 17:30",
+            stroller: "8.2/10 — Use T1 Tram; lock front wheels on cobbles",
+            kidsTip: "Unwind in flat, car-free Gülhane Park after lunch to spot green parakeets in the plane trees.",
+            routeUrl: "https://www.google.com/maps/dir/Hagia+Sophia,+Istanbul/Blue+Mosque,+Istanbul/Tarihi+Sultanahmet+Koftecisi+Selim+Usta,+Istanbul/Grand+Bazaar,+Istanbul/Gulhane+Park,+Istanbul",
+            stops: [
+              { time: "09:15", name: "Ayasofya (Hagia Sophia)", desc: "Arrive early before tour groups; park stroller at the guarded entrance rack and use a baby carrier inside.", pin: "Ayasofya Camii, Sultanahmet", url: "https://www.google.com/maps/search/?api=1&query=Hagia+Sophia+Istanbul" },
+              { time: "11:00", name: "Blue Mosque (Sultanahmet Camii)", desc: "Cross the flat park plaza to admire the six minarets and 20,000 handmade blue Iznik tiles.", pin: "Sultan Ahmet Camii, Fatih", url: "https://www.google.com/maps/search/?api=1&query=Blue+Mosque+Istanbul" },
+              { time: "12:30", name: "Lunch at Tarihi Sultanahmet Köftecisi (Est. 1920)", desc: "Iconic, 100% halal & alcohol-free family lunch of mild grilled beef meatballs, bean piyaz, and semolina helva.", pin: "Tarihi Sultanahmet Köftecisi Selim Usta", url: "https://www.google.com/maps/search/?api=1&query=Tarihi+Sultanahmet+Koftecisi+Selim+Usta" },
+              { time: "14:00", name: "Grand Bazaar (Enter via Flat Gate 47 Nuruosmaniye)", desc: "Stroll the main vaulted Kalpakçılar avenue to visit verified gold, silver, and leather artisans.", pin: "Kapalıçarşı Nuruosmaniye Kapısı", url: "https://www.google.com/maps/search/?api=1&query=Nuruosmaniye+Gate+Grand+Bazaar+Istanbul" },
+              { time: "16:15", name: "Gülhane Park Royal Gardens", desc: "Smooth, shaded downhill stroller walk through Topkapı's outer rose gardens to Gülhane T1 station.", pin: "Gülhane Parkı, Fatih", url: "https://www.google.com/maps/search/?api=1&query=Gulhane+Park+Istanbul" }
+            ]
+          },
+          {
+            day: 3,
+            title: "Day 3: Topkapı Palace, Textiles & Karaköy Baklava",
+            subtitle: "Topkapı & Imperial Harem · Sirkeci/Mahmutpaşa Wholesale · Galata Bridge · Karaköy Güllüoğlu",
+            bestTime: "09:00 – 18:00 (Closed Tuesdays)",
+            stroller: "7.8/10 — Walk Mahmutpaşa DOWNHILL toward Eminönü",
+            kidsTip: "Order chilled milk-soaked 'Soğuk Baklava' alongside hot pistachio baklava at Karaköy Güllüoğlu.",
+            routeUrl: "https://www.google.com/maps/dir/Topkapi+Palace+Museum,+Istanbul/Mahmutpasa+Yokusu,+Istanbul/Galata+Bridge,+Istanbul/Karakoy+Gulluoglu,+Istanbul",
+            stops: [
+              { time: "09:00", name: "Topkapı Palace & Imperial Harem", desc: "Tour the shaded palace courtyards, Sacred Relics, and tiled Harem with pre-booked audio guide tickets.", pin: "Topkapı Sarayı Müzesi", url: "https://www.google.com/maps/search/?api=1&query=Topkapi+Palace+Museum+Istanbul" },
+              { time: "13:00", name: "Sirkeci & Mahmutpaşa Wholesale Textile Corridor", desc: "Walk downhill toward Eminönü for 100% Turkish cotton kids' pyjamas, baby wear, Bursa towels, and linens.", pin: "Mahmutpaşa Yokuşu, Eminönü", url: "https://www.google.com/maps/search/?api=1&query=Mahmutpasa+Yokusu+Eminonu+Istanbul" },
+              { time: "15:30", name: "Walk Across Lower Galata Bridge", desc: "Roll smoothly across the Golden Horn on the wide lower pedestrian deck watching ferries and fishermen.", pin: "Galata Köprüsü, Karaköy", url: "https://www.google.com/maps/search/?api=1&query=Galata+Bridge+Istanbul" },
+              { time: "16:30", name: "Karaköy Güllüoğlu Baklava", desc: "Istanbul's legendary 1949 baklava hall; spacious seating, baby high chairs, and vacuum-sealed gift tins.", pin: "Karaköy Güllüoğlu, Kemankeş Cad.", url: "https://www.google.com/maps/search/?api=1&query=Karakoy+Gulluoglu+Istanbul" }
+            ]
+          },
+          {
+            day: 4,
+            title: "Day 4: Northern Bosphorus & İstinyePark",
+            subtitle: "Sütiş Emirgan Breakfast · Emirgan Park & Yalı Walk · Sarıyer Börek · İstinyePark",
+            bestTime: "09:30 – 19:00",
+            stroller: "9.4/10 — Smooth seaside promenade & luxury mall",
+            kidsTip: "Bring an extra sesame simit from Sütiş so the children can feed seagulls along the Bosphorus seawall.",
+            routeUrl: "https://www.google.com/maps/dir/Emirgan+Sutis,+Istanbul/Emirgan+Korusu,+Istanbul/Tarihi+Sariyer+Borekcisi,+Istanbul/Istinye+Park,+Istanbul",
+            stops: [
+              { time: "09:30", name: "Long Turkish Breakfast at Emirgan Sütiş", desc: "Seaside 'Serpme Kahvaltı' with farm cheeses, buffalo kaymak & honey, menemen, and fresh Rize tea.", pin: "Emirgan Sütiş, Sarıyer", url: "https://www.google.com/maps/search/?api=1&query=Emirgan+Sutis+Istanbul" },
+              { time: "11:15", name: "Emirgan Park & Bosphorus Yalı Walk", desc: "Stroll past historic Ottoman wooden waterfront mansions (Yalı) and Emirgan's tulip gardens.", pin: "Emirgan Korusu, Sarıyer", url: "https://www.google.com/maps/search/?api=1&query=Emirgan+Park+Istanbul" },
+              { time: "13:15", name: "Tarihi Sarıyer Börekçisi (Since 1895)", desc: "Taste flaky warm pastry filled with cheese, spinach, or spiced beef (plus sweet powdered-sugar börek for kids).", pin: "Tarihi Sarıyer Börekçisi", url: "https://www.google.com/maps/search/?api=1&query=Tarihi+Sariyer+Borekcisi+Istanbul" },
+              { time: "15:00", name: "Afternoon at İstinyePark Luxury Mall", desc: "Open-air designer avenue, traditional Pazaryeri food hall, VIP baby nursing suites, and Mescit.", pin: "İstinyePark AVM, Sarıyer", url: "https://www.google.com/maps/search/?api=1&query=IstinyePark+Istanbul" }
+            ]
+          },
+          {
+            day: 5,
+            title: "Day 5: Dolmabahçe, Galata Tower & Galataport",
+            subtitle: "Dolmabahçe Palace · İstiklal Vintage Tram · Galata Tower (Timed Entry) · Galataport",
+            bestTime: "09:00 – 20:00 (Dolmabahçe Closed Mondays)",
+            stroller: "8.8/10 — Use F1/F2 Funiculars to skip steep hills",
+            kidsTip: "Galataport's 1.2 km waterfront promenade is 100% car-free because the traffic and cruise terminal are underground.",
+            routeUrl: "https://www.google.com/maps/dir/Dolmabahce+Palace,+Istanbul/Taksim+Square,+Istanbul/Galata+Tower,+Istanbul/Galataport+Istanbul",
+            stops: [
+              { time: "09:00", name: "Dolmabahçe Palace", desc: "Flat seaside gardens, ornate Bosphorus gates, and the grand Ceremonial Hall with its 4.5-ton crystal chandelier.", pin: "Dolmabahçe Sarayı, Beşiktaş", url: "https://www.google.com/maps/search/?api=1&query=Dolmabahce+Palace+Istanbul" },
+              { time: "12:15", name: "F1 Funicular & Vintage Red Tram on İstiklal Avenue", desc: "Ride F1 underground from Kabataş to Taksim, then stroll wide pedestrian İstiklal Caddesi toward Galata.", pin: "İstiklal Caddesi, Beyoğlu", url: "https://www.google.com/maps/search/?api=1&query=Istiklal+Caddesi+Beyoglu+Istanbul" },
+              { time: "14:30", name: "Galata Tower (Timed Pre-Booking Required)", desc: "Take the elevator up the 14th-century stone watchtower for 360° views over the Golden Horn and Bosphorus.", pin: "Galata Kulesi, Beyoğlu", url: "https://www.google.com/maps/search/?api=1&query=Galata+Tower+Istanbul" },
+              { time: "17:00", name: "Galataport Waterfront Promenade", desc: "Step-free seaside stroll and family dinner overlooking the illuminated Old City minarets.", pin: "Galataport İstanbul, Karaköy", url: "https://www.google.com/maps/search/?api=1&query=Galataport+Istanbul" }
+            ]
+          },
+          {
+            day: 6,
+            title: "Day 6: Asian Side Ferry, Kadıköy & Moda Lawns",
+            subtitle: "Üsküdar & Maiden's Tower · Kadıköy Çarşı · Çiya Sofrası Lunch · Moda Seaside Park",
+            bestTime: "10:00 – 18:30",
+            stroller: "9.2/10 — Roll-on ferries & flat Moda coastal path",
+            kidsTip: "Moda's grassy seaside park has playgrounds and artisanal goat-milk ice cream overlooking the Marmara Sea.",
+            routeUrl: "https://www.google.com/maps/dir/Uskudar+Ferry+Terminal,+Istanbul/Kiz+Kulesi,+Istanbul/Ciya+Sofrasi,+Kadikoy,+Istanbul/Moda+Sahil+Parki,+Kadikoy,+Istanbul",
+            stops: [
+              { time: "10:00", name: "Commuter Ferry to Üsküdar (Maiden's Tower Views)", desc: "12-minute Şehir Hatları ferry from Beşiktaş; walk the flat Salacak promenade opposite Maiden's Tower (Kız Kulesi).", pin: "Kız Kulesi Salacak Sahili, Üsküdar", url: "https://www.google.com/maps/search/?api=1&query=Salacak+Kiz+Kulesi+Uskudar+Istanbul" },
+              { time: "12:15", name: "Kadıköy Çarşı Market", desc: "Browse Anatolian honeycomb, dried fruits, olives, and Turkish delight in the lively pedestrian market.", pin: "Kadıköy Tarihi Çarşı", url: "https://www.google.com/maps/search/?api=1&query=Kadikoy+Carsisi+Istanbul" },
+              { time: "13:15", name: "Regional Anatolian Lunch at Çiya Sofrası", desc: "Chef Musa Dağdeviren's world-renowned, 100% halal & alcohol-free kitchen serving authentic Anatolian stews & kebabs.", pin: "Çiya Sofrası, Kadıköy", url: "https://www.google.com/maps/search/?api=1&query=Ciya+Sofrasi+Kadikoy+Istanbul" },
+              { time: "15:15", name: "Moda Seaside Park & Sunset Ferry Back", desc: "Flat 3 km waterfront lawns and playgrounds before taking the direct ferry back to the European side.", pin: "Moda Sahil Parkı, Kadıköy", url: "https://www.google.com/maps/search/?api=1&query=Moda+Sahil+Parki+Kadikoy+Istanbul" }
+            ]
+          }
+        ],
+        day7: {
+          winter: {
+            day: 7,
+            title: "Day 7 (Winter): Mount Uludağ Snow & Historic Bursa",
+            subtitle: "BUDO Catamaran · Bursa Grand Mosque & Koza Han · İskender Kebap · Teleferik Cable Car",
+            bestTime: "08:00 – 20:30",
+            stroller: "8.0/10 — Compact stroller fits inside Teleferik gondola",
+            kidsTip: "Rent plastic kids' sleds (kızak) right outside the Sarıalan cable car station for gentle snow play.",
+            routeUrl: "https://www.google.com/maps/dir/Eminonu+BUDO+Pier,+Istanbul/Mudanya+BUDO+Iskelesi,+Bursa/Bursa+Ulu+Camii/Koza+Han,+Bursa/Bursa+Teleferik+Teferruc+Istasyonu",
+            stops: [
+              { time: "08:30", name: "BUDO Sea Catamaran (Eminönü/Kabataş → Mudanya)", desc: "Heated 1h 50m high-speed ferry across the Marmara Sea to Bursa with indoor seating and stroller storage.", pin: "BUDO Eminönü İskelesi", url: "https://budo.burulas.com.tr/" },
+              { time: "11:00", name: "Bursa Grand Mosque (Ulu Camii) & Koza Han Silk Courtyard", desc: "Visit the 20-domed 1399 mosque and shop for pure Bursa silk scarves in the historic Koza Han caravanserai.", pin: "Koza Han, Osmangazi, Bursa", url: "https://www.google.com/maps/search/?api=1&query=Koza+Han+Bursa" },
+              { time: "12:45", name: "Authentic Bursa İskender Kebap", desc: "Taste original Uludağ lamb over pide bread with tomato sauce, sheep's yogurt, and sizzling butter.", pin: "Kebapçı İskender Tarihi Ahşap Dükkan, Bursa", url: "https://www.google.com/maps/search/?api=1&query=Kebapci+Iskender+Tarihi+Ahsap+Dukkan+Bursa" },
+              { time: "14:30", name: "Bursa Teleferik Cable Car to Mount Uludağ Snow", desc: "25-minute panoramic gondola ride over snowy pine forests to Sarıalan plateau for sledding and hot salep.", pin: "Bursa Teleferik Teferrüç İstasyonu", url: "https://www.google.com/maps/search/?api=1&query=Bursa+Teleferik+Teferruc+Istasyonu" }
+            ]
+          },
+          spring: {
+            day: 7,
+            title: "Day 7 (Spring): Lake Sapanca, Maşukiye & Ormanya",
+            subtitle: "Private Mercedes Vito · Ormanya Hobbit Forest · Maşukiye Stream Lunch · Lake Sapanca",
+            bestTime: "08:30 – 19:30",
+            stroller: "9.5/10 — Paved forest loops & flat lakeside boardwalk",
+            kidsTip: "Ormanya features fairytale Hobbit houses and a free petting zoo with deer, alpacas, and ponies.",
+            routeUrl: "https://www.google.com/maps/dir/Besiktas,+Istanbul/Ormanya+Dogal+Yasam+Parki,+Kocaeli/Masukiye+Selale+Restoranlari,+Kocaeli/Sapanca+Golu+Sahili,+Sakarya",
+            stops: [
+              { time: "08:30", name: "Private Mercedes Vito Pickup from Hotel", desc: "Comfortable 90-minute door-to-door drive east to Kocaeli/Sakarya with child seats and room for unfolded strollers.", pin: "Sapanca Gölü, Sakarya", url: "https://www.google.com/maps/search/?api=1&query=Sapanca+Lake+Sakarya" },
+              { time: "10:15", name: "Ormanya Wildlife Park & Hobbit Village", desc: "Flat, stroller-friendly forest paths through Europe's largest natural habitat park and whimsical Hobbit cottages.", pin: "Ormanya Doğal Yaşam Parkı, Kartepe", url: "https://www.google.com/maps/search/?api=1&query=Ormanya+Dogal+Yasam+Parki+Kocaeli" },
+              { time: "13:00", name: "Maşukiye Stream-Side Waterfall Lunch", desc: "Halal clay-tile trout, melted kasar cheese, and village cornbread at wooden tables built over mountain brooks.", pin: "Maşukiye Vadi Restaurant, Kartepe", url: "https://www.google.com/maps/search/?api=1&query=Masukiye+Vadi+Restaurant+Kocaeli" },
+              { time: "15:30", name: "Lake Sapanca Waterfront Boardwalk", desc: "Relaxed 2 km flat stroller walk along the freshwater lake shore with tea gardens before returning to Istanbul.", pin: "Sapanca Gölü Sahil Yürüyüş Yolu", url: "https://www.google.com/maps/search/?api=1&query=Sapanca+Golu+Sahil+Yuruyus+Yolu" }
+            ]
+          }
+        },
+        shops: [
+          { name: "Zorlu Center", cat: "Luxury Malls", badge: "M2 Gayrettepe Direct Tunnel", desc: "Chanel, Dior, Louis Vuitton, Apple Store, Eataly, luxury baby care rooms & outdoor playground.", addr: "Zorlu Center, Gayrettepe, Beşiktaş", url: "https://www.google.com/maps/search/?api=1&query=Zorlu+Center+Istanbul" },
+          { name: "İstinyePark", cat: "Luxury Malls", badge: "Open-Air Designer Avenue", desc: "Chanel, Hermès, Vakko flagship, Beymen, plus authentic Pazaryeri gourmet food bazaar.", addr: "İstinyePark AVM, Sarıyer", url: "https://www.google.com/maps/search/?api=1&query=IstinyePark+Istanbul" },
+          { name: "Kanyon & Vadistanbul", cat: "Luxury Malls", badge: "Levent M2 & Forest Monorail", desc: "Kanyon open-air architectural mall at Levent M2 & Vadistanbul 760m boulevard beside Belgrad Forest.", addr: "Kanyon AVM, Levent, İstanbul", url: "https://www.google.com/maps/search/?api=1&query=Kanyon+AVM+Levent+Istanbul" },
+          { name: "Cevahir Mall", cat: "Family & High-Street", badge: "M2 Şişli Direct Concourse", desc: "6 floors of high-street family value: LC Waikiki, Defacto, Panço, ebebek, Mothercare & instant Tax-Free.", addr: "İstanbul Cevahir AVM, Şişli", url: "https://www.google.com/maps/search/?api=1&query=Istanbul+Cevahir+AVM+Sisli" },
+          { name: "Forum Istanbul", cat: "Family & High-Street", badge: "Sea Life Aquarium & Decathlon", desc: "Home to Sea Life Aquarium underwater tunnel, Legoland, giant Decathlon outdoor store & IKEA.", addr: "Forum İstanbul AVM, Bayrampaşa", url: "https://www.google.com/maps/search/?api=1&query=Forum+Istanbul+Bayrampasa" },
+          { name: "Sirkeci & Mahmutpaşa Slope", cat: "Wholesale Textiles", badge: "100% Turkish Cotton & Linens", desc: "Historic wholesale/retail slope for organic cotton kids' wear, pyjamas, Bursa towels & linens (walk downhill).", addr: "Mahmutpaşa Yokuşu, Eminönü", url: "https://www.google.com/maps/search/?api=1&query=Mahmutpasa+Yokusu+Eminonu+Istanbul" },
+          { name: "Laleli & Merter District", cat: "Wholesale Textiles", badge: "Modest Fashion & Coats", desc: "Export-grade modest dresses, cashmere/wool coats, and children's occasion wear with Arabic/French staff.", addr: "Ordu Caddesi, Laleli, Fatih", url: "https://www.google.com/maps/search/?api=1&query=Laleli+Ordu+Caddesi+Fatih+Istanbul" },
+          { name: "Kafkas Jewellery & Topkapı Mücevherat", cat: "Grand Bazaar Artisans", badge: "Verified 18K/22K Gold Hallmark", desc: "Fine Gold & Gemstones on main Kalpakçılar Cad. (No: 4–6) with Chamber of Jewellers certification.", addr: "Kapalıçarşı, Kalpakçılar Cad. No: 4-6", url: "https://www.google.com/maps/search/?api=1&query=Kafkas+Jewellery+Kalpakcilar+Grand+Bazaar+Istanbul" },
+          { name: "Sait Aslı Gümüş & Şalabi Antik", cat: "Grand Bazaar Artisans", badge: "Verified .925 Silver & Ottoman Toughra", desc: "Hand-hammered sterling silver tea sets in historic Kalcılar Han & Ottoman antiques inside İç Bedesten.", addr: "Kalcılar Han & İç Bedesten, Kapalıçarşı", url: "https://www.google.com/maps/search/?api=1&query=Kalcilar+Han+Kapalicarsi+Istanbul" },
+          { name: "Koç Leather & Fur + Punto Leather & Fur", cat: "Grand Bazaar Artisans", badge: "Verified Aegean Lambskin & Shearling", desc: "Feather-light reversible shearling & custom-tailored lambskin at Kürkçüler Çarşısı No: 22–46 & flat Gate 47.", addr: "Kapalıçarşı Nuruosmaniye Kapısı Gate 47", url: "https://www.google.com/maps/search/?api=1&query=Punto+Leather+Nuruosmaniye+Grand+Bazaar+Istanbul" }
+        ]
+      },
+
+      fr: {
+        brand: "Guide Famille Istanbul",
+        nav: ["Programme 7 Jours", "Où Loger", "Shopping", "Transports & Cartes", "Sécurité & Checklist"],
+        winterBtn: "❄️ Édition Hiver / Neige",
+        springBtn: "🌸 Édition Printemps / Fleurs",
+        eyebrow: "Édition Spéciale Famille Marocaine · Accessible en Poussette · 100% Halal",
+        heroTitle: "Istanbul en Famille : Guide sur Mesure 7 Jours",
+        seasonSummary: {
+          winter: "Édition Hiver : Ferries chauffés sur le Bosphore, bazars couverts et excursion en téléphérique sous la neige au Mont Uludağ à Bursa.",
+          spring: "Édition Printemps : Tulipes en fleurs dans les parcs d'Emirgan et Gülhane, brise douce sur le Bosphore et déjeuner au bord des ruisseaux à Sapanca & Maşukiye."
+        },
+        searchPlaceholder: "Recherche rapide (ex. kumpir, or, cuir, poussette, M2, pharmacie)...",
+        sec1Title: "Itinéraire Jour par Jour (7 Jours)",
+        sec1Sub: "Sélectionnez un jour ci-dessous. Le Jour 7 s'adapte automatiquement selon votre choix Hiver ou Printemps.",
+        sec2Title: "Où Loger (Quartiers Recommandés)",
+        sec2Sub: "Comparatif des trois meilleurs quartiers familiaux selon l'accès poussette et les transports.",
+        sec3Title: "Répertoire Shopping & Artisans",
+        sec3Sub: "Filtrez par centres commerciaux de luxe, malls familiaux, coton turc en gros et artisans certifiés du Grand Bazar.",
+        sec4Title: "Transports & Règles Istanbulkart",
+        sec4Sub: "Tramways sans marches, métros avec ascenseurs, ferries, applications indispensables et portails officiels.",
+        sec5Title: "Santé Pédiatrique & Checklist de Départ",
+        sec5Sub: "Pharmacies de garde 24h/24 (Nöbetçi Eczane), restaurants 100% halal sans alcool, conseils poussette et réservations.",
+        printBtn: "🖨️ Imprimer / Enregistrer PDF",
+        routeBtn: "Itinéraire Google Maps ↗",
+        specBestTime: "Meilleur créneau",
+        specStroller: "Accès poussette",
+        specKids: "Astuce enfants",
+        copyBtn: "Copier",
+        copyTaxiBtn: "Copier pour le taxi",
+        copyAddrBtn: "Copier l'adresse",
+        copiedToast: "Copié : ",
+        mapBtn: "Carte ↗",
+        gmapsBtn: "Google Maps ↗",
+        dayLabel: "Jour",
+        snowShort: " · Neige",
+        springShort: " · Printemps",
+        kartTag: "Règle d'Or des Transports",
+        kartTitle: "UNE SEULE carte suffit pour toute la famille — validez à tour de rôle.",
+        kartDesc: "Achetez une seule carte Istanbulkart aux bornes jaunes/bleues Biletmatik. Le Parent 1 valide une fois et passe avec la poussette par le portillon large, puis tend la même carte au Parent 2. <strong>Gratuit à 100% pour les enfants de moins de 6 ans.</strong>",
+        appsTitle: "Applications Mobiles Indispensables",
+        portalsTitle: "Portails Officiels des Transports",
+        checkHeading: "Checklist des Réservations Avant le Départ",
+        shopCats: {
+          "All": "Tout",
+          "Luxury Malls": "Malls de Luxe",
+          "Family & High-Street": "Malls Familiaux",
+          "Wholesale Textiles": "Textiles & Coton en Gros",
+          "Grand Bazaar Artisans": "Artisans Certifiés du Grand Bazar"
+        },
+        baseCamps: [
+          {
+            badge: "Meilleur Choix Global & Promenade · Poussette 9,5/10",
+            name: "Beşiktaş",
+            sub: "Akaretler · Vişnezade · Yıldız",
+            bullets: [
+              "Promenades plates au bord de l'eau du palais de Dolmabahçe jusqu'à Ortaköy.",
+              "Ferries directs (sans marches) vers Kadıköy et Üsküdar (rive asiatique).",
+              "À deux pas du parc de Yıldız (aires de jeux ombragées pour enfants)."
+            ],
+            pin: "Beşiktaş İskelesi, Akaretler, İstanbul",
+            url: "https://www.google.com/maps/search/?api=1&query=Akaretler+Besiktas+Istanbul"
+          },
+          {
+            badge: "Hub Métro & Infrastructures · Poussette 9,0/10",
+            name: "Gayrettepe / Balmumcu",
+            sub: "Zorlu Center Hub",
+            bullets: [
+              "Tunnel souterrain direct et abrité vers la ligne verte du métro M2.",
+              "Ascenseurs spacieux et accès direct au Zorlu Center (boutiques & grand parc enfants).",
+              "Appartements hôteliers familiaux modernes avec cuisine équipée."
+            ],
+            pin: "Zorlu Center, Gayrettepe, Beşiktaş",
+            url: "https://www.google.com/maps/search/?api=1&query=Zorlu+Center+Istanbul"
+          },
+          {
+            badge: "Calme Résidentiel & Verdure · Poussette 7,8/10",
+            name: "Ulus / Etiler",
+            sub: "Ulus Park · Nispetiye",
+            bullets: [
+              "Quartier résidentiel verdoyant et paisible avec vue panoramique sur le Bosphore.",
+              "Proche des cafés du parc d'Ulus et du centre commercial Akmerkez.",
+              "Courts trajets en BiTaksi/Uber ou métro M2 Levent pour rejoindre la vieille ville."
+            ],
+            pin: "Ulus Parkı, Beşiktaş, İstanbul",
+            url: "https://www.google.com/maps/search/?api=1&query=Ulus+Parki+Istanbul"
+          }
+        ],
+        transitCards: [
+          {
+            tag: "Accès Plain-Pied Sans Marches",
+            title: "Tramway T1 & Funiculaires F1/F2",
+            desc: "Le <strong>Tramway T1</strong> relie Kabataş, Karaköy, Eminönü, Sultanahmet et le Grand Bazar sans aucune marche. Empruntez les funiculaires <strong>F1 (Kabataş–Taksim)</strong> et <strong>F2 Tünel (Karaköy–Galata)</strong> pour éviter les côtes raides en 90 secondes."
+          },
+          {
+            tag: "Ascenseurs & Embarquement Poussette",
+            title: "Métro M2 & Ferries Şehir Hatları",
+            desc: "La <strong>ligne verte M2</strong> dispose d'ascenseurs vers Cevahir (Şişli), Zorlu (Gayrettepe), Kanyon (Levent) et İstinyePark. Les <strong>ferries Şehir Hatları</strong> permettent d'embarquer directement avec la poussette ouverte."
+          }
+        ],
+        apps: [
+          { name: "BiTaksi & Uber", desc: "Taxis officiels jaunes/turquoises et vans Mercedes Vito noirs", label: "BiTaksi ↗", url: "https://www.bitaksi.com/en/" },
+          { name: "Getir", desc: "Livraison en 15 min de couches, lait infantile, eau et snacks à l'hôtel", label: "Getir ↗", url: "https://getir.com/en/" },
+          { name: "Citymapper & Google Maps", desc: "Itinéraires métro/ferry en temps réel (activez l'option Accessible)", label: "Citymapper ↗", url: "https://citymapper.com/istanbul" }
+        ],
+        safetyCards: [
+          {
+            tagClass: "tag-amber",
+            tag: "Urgences : 112",
+            title: "Pharmacie de Garde 24h/24 (Nöbetçi Eczane)",
+            desc: "Repérez l'enseigne rouge <strong>« E » (Eczane)</strong> pour les sirops pédiatriques (Calpol/Dolven) et le sérum physiologique. Après 19h et le dimanche, chaque pharmacie fermée affiche sur un écran lumineux l'adresse de la <strong>Nöbetçi Eczane</strong> ouverte 24h/24 la plus proche.",
+            linkLabel: "Trouver une Nöbetçi Eczane en direct ↗",
+            linkUrl: "https://www.istanbuleczaciodasi.org.tr/nobetci-eczane/"
+          },
+          {
+            tagClass: "tag-green",
+            tag: "100% Halal Certifié",
+            title: "Repas Halal & Salles de Prière (Mescit)",
+            desc: "Toutes les viandes en Turquie sont <strong>100% halal</strong> par défaut. Parmi les institutions familiales sans alcool sur votre parcours : <strong>Tarihi Sultanahmet Köftecisi</strong>, <strong>Emirgan Sütiş</strong>, <strong>Çiya Sofrası</strong> et <strong>Karaköy Güllüoğlu</strong>. Tous les malls disposent de salles de prière (<strong>Mescit</strong>) et d'espaces bébé."
+          },
+          {
+            tagClass: "",
+            tag: "Conseils Poussette",
+            title: "Pavés & Pentes",
+            desc: "Bloquez les roues avant pivotantes de la poussette sur les pavés de Sultanahmet. Entrez au Grand Bazar par la porte plate <strong>Gate 47 (Nuruosmaniye)</strong>, descendez la rue Mahmutpaşa vers Eminönü et prévoyez un porte-bébé pour l'intérieur d'Ayasofya."
+          }
+        ],
+        checklist: [
+          { title: "Réserver les billets Dolmabahçe & Topkapı (+ Harem)", desc: "Réservez en ligne avec audioguide pour éviter les files d'attente du matin." },
+          { title: "Réserver le créneau horaire pour la Tour de Galata", desc: "Sécurisez votre montée en ascenseur pour l'après-midi du Jour 5." },
+          { title: "Option Hiver : Réserver le catamaran BUDO A/R pour Bursa", desc: "Traversée Eminönü/Kabataş ↔ Mudanya pour la journée neige au Mont Uludağ." },
+          { title: "Option Printemps : Réserver un van privé Mercedes Vito pour Sapanca", desc: "Transfert familial porte-à-porte (1h30) vers Ormanya, Maşukiye et le lac de Sapanca." }
+        ],
+        days: [
+          {
+            day: 1,
+            title: "Jour 1 : Installation & Promenade sur la Rive d'Ortaköy",
+            subtitle: "Front de mer d'Ortaköy · Mosquée Büyük Mecidiye · Kumpir & Gaufres · Dîner à Akaretler",
+            bestTime: "14:30 – 20:30",
+            stroller: "9,5/10 — Quai entièrement plat au bord de l'eau",
+            kidsTip: "Laissez les enfants choisir leurs garnitures de Kumpir et observer les bateaux passer devant la mosquée.",
+            routeUrl: "https://www.google.com/maps/dir/Besiktas+Meydan,+Istanbul/Ortakoy+Mosque,+Istanbul/Akaretler+Siraevler,+Istanbul",
+            stops: [
+              { time: "14:00", name: "Arrivée & Installation à l'Hôtel", desc: "Installation à Beşiktaş, Gayrettepe ou Ulus ; commandez eau, lait et couches en 15 min via l'application Getir.", pin: "Beşiktaş Meydan, İstanbul", url: "https://www.google.com/maps/search/?api=1&query=Besiktas+Istanbul" },
+              { time: "16:00", name: "Promenade à Ortaköy & Mosquée Büyük Mecidiye", desc: "Balade plate en poussette sur l'esplanade du Bosphore sous le pont suspendu et visite de la mosquée sur l'eau.", pin: "Büyük Mecidiye Camii, Ortaköy", url: "https://www.google.com/maps/search/?api=1&query=Buyuk+Mecidiye+Mosque+Ortakoy+Istanbul" },
+              { time: "17:15", name: "Kumpir au Four & Gaufres d'Ortaköy", desc: "Dégustez une grande pomme de terre au four garnie de beurre, fromage kaşar, maïs, olives et saucisse halal, suivie de gaufres chaudes.", pin: "Ortaköy Kumpircileri, Beşiktaş", url: "https://www.google.com/maps/search/?api=1&query=Ortakoy+Kumpir+Istanbul" },
+              { time: "19:00", name: "Dîner en Famille à Akaretler", desc: "Dîner halal convivial le long des élégantes maisons historiques illuminées d'Akaretler.", pin: "Akaretler Sıraevler, Beşiktaş", url: "https://www.google.com/maps/search/?api=1&query=Akaretler+Siraevler+Besiktas+Istanbul" }
+            ]
+          },
+          {
+            day: 2,
+            title: "Jour 2 : Cœur Impérial de Sultanahmet & Parc de Gülhane",
+            subtitle: "Sainte-Sophie (Ayasofya) · Mosquée Bleue · Tarihi Sultanahmet Köftecisi · Grand Bazar · Parc Gülhane",
+            bestTime: "09:00 – 17:30",
+            stroller: "8,2/10 — Tram T1 plain-pied ; bloquez les roues avant sur les pavés",
+            kidsTip: "Détente après le déjeuner dans les allées plates et sans voitures du parc de Gülhane sous les platanes.",
+            routeUrl: "https://www.google.com/maps/dir/Hagia+Sophia,+Istanbul/Blue+Mosque,+Istanbul/Tarihi+Sultanahmet+Koftecisi+Selim+Usta,+Istanbul/Grand+Bazaar,+Istanbul/Gulhane+Park,+Istanbul",
+            stops: [
+              { time: "09:15", name: "Sainte-Sophie (Ayasofya-i Kebir Camii)", desc: "Arrivez tôt avant les groupes ; laissez la poussette à l'espace sécurisé de l'entrée et utilisez un porte-bébé à l'intérieur.", pin: "Ayasofya Camii, Sultanahmet", url: "https://www.google.com/maps/search/?api=1&query=Hagia+Sophia+Istanbul" },
+              { time: "11:00", name: "Mosquée Bleue (Sultanahmet Camii) & Hippodrome", desc: "Traversez l'esplanade fleurie pour admirer les six minarets et les 20 000 carreaux de faïence bleue d'İznik.", pin: "Sultan Ahmet Camii, Fatih", url: "https://www.google.com/maps/search/?api=1&query=Blue+Mosque+Istanbul" },
+              { time: "12:30", name: "Déjeuner chez Tarihi Sultanahmet Köftecisi (Fondé en 1920)", desc: "Institution familiale 100% halal et sans alcool servant de tendres boulettes de bœuf grillées (köfte), salade de haricots blancs et helva de semoule.", pin: "Tarihi Sultanahmet Köftecisi Selim Usta", url: "https://www.google.com/maps/search/?api=1&query=Tarihi+Sultanahmet+Koftecisi+Selim+Usta" },
+              { time: "14:00", name: "Grand Bazar (Entrée plate par Gate 47 Nuruosmaniye)", desc: "Parcourez l'allée principale voûtée Kalpakçılar pour visiter les bijoutiers, orfèvres et ateliers de cuir certifiés.", pin: "Kapalıçarşı Nuruosmaniye Kapısı", url: "https://www.google.com/maps/search/?api=1&query=Nuruosmaniye+Gate+Grand+Bazaar+Istanbul" },
+              { time: "16:15", name: "Jardins Royaux du Parc de Gülhane", desc: "Promenade douce en pente descendante à l'ombre des grands arbres jusqu'à la station de tramway Gülhane T1.", pin: "Gülhane Parkı, Fatih", url: "https://www.google.com/maps/search/?api=1&query=Gulhane+Park+Istanbul" }
+            ]
+          },
+          {
+            day: 3,
+            title: "Jour 3 : Palais de Topkapı, Textiles & Baklava de Karaköy",
+            subtitle: "Topkapı & Harem Impérial · Pente Textile Mahmutpaşa · Pont de Galata · Karaköy Güllüoğlu",
+            bestTime: "09:00 – 18:00 (Fermé le mardi)",
+            stroller: "7,8/10 — Descendez la rue Mahmutpaşa du haut vers Eminönü",
+            kidsTip: "Goûtez le 'Soğuk Baklava' (baklava frais au lait et chocolat) en plus du baklava chaud à la pistache chez Güllüoğlu.",
+            routeUrl: "https://www.google.com/maps/dir/Topkapi+Palace+Museum,+Istanbul/Mahmutpasa+Yokusu,+Istanbul/Galata+Bridge,+Istanbul/Karakoy+Gulluoglu,+Istanbul",
+            stops: [
+              { time: "09:00", name: "Palais de Topkapı & Harem Impérial", desc: "Explorez les cours verdoyantes des sultans, les Reliques Sacrées et le Harem avec vos billets coupe-file audioguidés.", pin: "Topkapı Sarayı Müzesi", url: "https://www.google.com/maps/search/?api=1&query=Topkapi+Palace+Museum+Istanbul" },
+              { time: "13:00", name: "Quartier Textile de Gros de Sirkeci & Mahmutpaşa", desc: "Descendez vers Eminönü pour acheter pyjamas enfants 100% coton turc, vêtements bébé, serviettes de Bursa et linge de maison.", pin: "Mahmutpaşa Yokuşu, Eminönü", url: "https://www.google.com/maps/search/?api=1&query=Mahmutpasa+Yokusu+Eminonu+Istanbul" },
+              { time: "15:30", name: "Traversée du Pont Inférieur de Galata", desc: "Marchez au bord de l'eau sur le pont piétonnier inférieur en observant les ferries de la Corne d'Or et les pêcheurs.", pin: "Galata Köprüsü, Karaköy", url: "https://www.google.com/maps/search/?api=1&query=Galata+Bridge+Istanbul" },
+              { time: "16:30", name: "Baklava chez Karaköy Güllüoğlu", desc: "La plus célèbre maison de baklava d'Istanbul (depuis 1949) ; grande salle accessible en poussette et boîtes sous vide pour l'avion.", pin: "Karaköy Güllüoğlu, Kemankeş Cad.", url: "https://www.google.com/maps/search/?api=1&query=Karakoy+Gulluoglu+Istanbul" }
+            ]
+          },
+          {
+            day: 4,
+            title: "Jour 4 : Rives Nord du Bosphore & İstinyePark",
+            subtitle: "Petit-déjeuner chez Emirgan Sütiş · Parc d'Emirgan · Börek de Sarıyer · İstinyePark",
+            bestTime: "09:30 – 19:00",
+            stroller: "9,4/10 — Promenade côtière lisse & mall de luxe",
+            kidsTip: "Prenez un simit au sésame supplémentaire chez Sütiş pour que les enfants nourrissent les mouettes au bord du Bosphore.",
+            routeUrl: "https://www.google.com/maps/dir/Emirgan+Sutis,+Istanbul/Emirgan+Korusu,+Istanbul/Tarihi+Sariyer+Borekcisi,+Istanbul/Istinye+Park,+Istanbul",
+            stops: [
+              { time: "09:30", name: "Grand Petit-Déjeuner Turc chez Emirgan Sütiş", desc: "Petit-déjeuner traditionnel 'Serpme Kahvaltı' face au Bosphore : crème kaymak au miel, fromages fermiers, menemen et thé de Rize.", pin: "Emirgan Sütiş, Sarıyer", url: "https://www.google.com/maps/search/?api=1&query=Emirgan+Sutis+Istanbul" },
+              { time: "11:15", name: "Parc d'Emirgan & Promenade devant les Yalı", desc: "Balade devant les demeures ottomanes en bois au bord de l'eau (Yalı) et les jardins fleuris d'Emirgan.", pin: "Emirgan Korusu, Sarıyer", url: "https://www.google.com/maps/search/?api=1&query=Emirgan+Park+Istanbul" },
+              { time: "13:15", name: "Tarihi Sarıyer Börekçisi (Depuis 1895)", desc: "Savourez les célèbres feuilletés chauds au fromage, épinards ou viande hachée (et le börek sucré au sucre glace pour les enfants).", pin: "Tarihi Sarıyer Börekçisi", url: "https://www.google.com/maps/search/?api=1&query=Tarihi+Sariyer+Borekcisi+Istanbul" },
+              { time: "15:00", name: "Après-midi Shopping à İstinyePark", desc: "Avenue de créateurs en plein air, halle gourmande traditionnelle Pazaryeri, suites bébés VIP et salle de prière Mescit.", pin: "İstinyePark AVM, Sarıyer", url: "https://www.google.com/maps/search/?api=1&query=IstinyePark+Istanbul" }
+            ]
+          },
+          {
+            day: 5,
+            title: "Jour 5 : Palais de Dolmabahçe, Tour de Galata & Galataport",
+            subtitle: "Palais de Dolmabahçe · Tramway Rétro d'İstiklal · Tour de Galata · Promenade Galataport",
+            bestTime: "09:00 – 20:00 (Dolmabahçe fermé le lundi)",
+            stroller: "8,8/10 — Utilisez les funiculaires F1/F2 pour éviter les montées",
+            kidsTip: "Toute la promenade maritime de Galataport (1,2 km) est 100% piétonne et sécurisée pour les jeunes enfants.",
+            routeUrl: "https://www.google.com/maps/dir/Dolmabahce+Palace,+Istanbul/Taksim+Square,+Istanbul/Galata+Tower,+Istanbul/Galataport+Istanbul",
+            stops: [
+              { time: "09:00", name: "Palais de Dolmabahçe", desc: "Jardins plats au bord du Bosphore, portes impériales en marbre et grande salle d'apparat au lustre en cristal de 4,5 tonnes.", pin: "Dolmabahçe Sarayı, Beşiktaş", url: "https://www.google.com/maps/search/?api=1&query=Dolmabahce+Palace+Istanbul" },
+              { time: "12:15", name: "Funiculaire F1 & Tramway Rouge sur l'Avenue İstiklal", desc: "Montez en 2 minutes de Kabataş à Taksim via le F1, puis descendez la grande avenue piétonne İstiklal vers Galata.", pin: "İstiklal Caddesi, Beyoğlu", url: "https://www.google.com/maps/search/?api=1&query=Istiklal+Caddesi+Beyoglu+Istanbul" },
+              { time: "14:30", name: "Tour de Galata (Créneau Réservé à l'Avance)", desc: "Montez en ascenseur au sommet de la tour génoise du XIVe siècle pour un panorama à 360° sur Istanbul.", pin: "Galata Kulesi, Beyoğlu", url: "https://www.google.com/maps/search/?api=1&query=Galata+Tower+Istanbul" },
+              { time: "17:00", name: "Promenade & Dîner au Bord de l'Eau à Galataport", desc: "Balade sans aucune marche le long des quais modernes et dîner en famille face à la vieille ville illuminée.", pin: "Galataport İstanbul, Karaköy", url: "https://www.google.com/maps/search/?api=1&query=Galataport+Istanbul" }
+            ]
+          },
+          {
+            day: 6,
+            title: "Jour 6 : Traversée vers la Rive Asiatique, Kadıköy & Moda",
+            subtitle: "Üsküdar & Tour de Léandre · Marché de Kadıköy · Déjeuner chez Çiya Sofrası · Parc de Moda",
+            bestTime: "10:00 – 18:30",
+            stroller: "9,2/10 — Ferries plain-pied & parc côtier plat à Moda",
+            kidsTip: "Le parc en bord de mer de Moda offre de vastes pelouses, des aires de jeux et d'excellentes glaces artisanales.",
+            routeUrl: "https://www.google.com/maps/dir/Uskudar+Ferry+Terminal,+Istanbul/Kiz+Kulesi,+Istanbul/Ciya+Sofrasi,+Kadikoy,+Istanbul/Moda+Sahil+Parki,+Kadikoy,+Istanbul",
+            stops: [
+              { time: "10:00", name: "Ferry vers Üsküdar & Vue sur la Tour de Léandre (Kız Kulesi)", desc: "Traversée de 12 min en ferry depuis Beşiktaş ; promenade plate à Salacak face à l'îlot de la Tour de Léandre.", pin: "Kız Kulesi Salacak Sahili, Üsküdar", url: "https://www.google.com/maps/search/?api=1&query=Salacak+Kiz+Kulesi+Uskudar+Istanbul" },
+              { time: "12:15", name: "Marché Historique de Kadıköy (Kadıköy Çarşı)", desc: "Flânez dans les ruelles piétonnes réputées pour le miel en rayon d'Anatolie, les fruits secs, les olives et les loukoums.", pin: "Kadıköy Tarihi Çarşı", url: "https://www.google.com/maps/search/?api=1&query=Kadikoy+Carsisi+Istanbul" },
+              { time: "13:15", name: "Déjeuner Anatolien chez Çiya Sofrası", desc: "La table emblématique du chef Musa Dağdeviren (100% halal et sans alcool) célébrant les plats régionaux d'Anatolie.", pin: "Çiya Sofrası, Kadıköy", url: "https://www.google.com/maps/search/?api=1&query=Ciya+Sofrasi+Kadikoy+Istanbul" },
+              { time: "15:15", name: "Parc Côtier de Moda & Ferry du Coucher de Soleil", desc: "Détente sur les pelouses et aires de jeux en bord de mer avant le retour direct en ferry vers Beşiktaş.", pin: "Moda Sahil Parkı, Kadıköy", url: "https://www.google.com/maps/search/?api=1&query=Moda+Sahil+Parki+Kadikoy+Istanbul" }
+            ]
+          }
+        ],
+        day7: {
+          winter: {
+            day: 7,
+            title: "Jour 7 (Hiver) : Neige au Mont Uludağ & Bursa Historique",
+            subtitle: "Catamaran BUDO · Grande Mosquée & Koza Han · İskender Kebap · Téléphérique Uludağ",
+            bestTime: "08:00 – 20:30",
+            stroller: "8,0/10 — Poussette pliante admise dans la cabine du téléphérique",
+            kidsTip: "Louez des luges en plastique pour enfants juste à la sortie de la station de téléphérique Sarıalan pour jouer dans la neige.",
+            routeUrl: "https://www.google.com/maps/dir/Eminonu+BUDO+Pier,+Istanbul/Mudanya+BUDO+Iskelesi,+Bursa/Bursa+Ulu+Camii/Koza+Han,+Bursa/Bursa+Teleferik+Teferruc+Istasyonu",
+            stops: [
+              { time: "08:30", name: "Catamaran Rapide BUDO (Eminönü/Kabataş → Mudanya)", desc: "Traversée confortable et chauffée d'1h50 sur la mer de Marmara jusqu'au port de Mudanya à Bursa.", pin: "BUDO Eminönü İskelesi", url: "https://budo.burulas.com.tr/" },
+              { time: "11:00", name: "Grande Mosquée de Bursa (Ulu Camii) & Cour de la Soie Koza Han", desc: "Visitez la mosquée aux 20 coupoles (1399) et découvrez les foulards en pure soie de Bursa dans le caravansérail de Koza Han.", pin: "Koza Han, Osmangazi, Bursa", url: "https://www.google.com/maps/search/?api=1&query=Koza+Han+Bursa" },
+              { time: "12:45", name: "Véritable İskender Kebap de Bursa", desc: "Savourez l'İskender Kebap originel : fines tranches d'agneau sur pain pide, sauce tomate chaude, yaourt de brebis et beurre noisette.", pin: "Kebapçı İskender Tarihi Ahşap Dükkan, Bursa", url: "https://www.google.com/maps/search/?api=1&query=Kebapci+Iskender+Tarihi+Ahsap+Dukkan+Bursa" },
+              { time: "14:30", name: "Téléphérique de Bursa (Teleferik) vers la Neige d'Uludağ", desc: "Montée panoramique en télécabine fermée au-dessus des forêts de pins enneigées jusqu'au plateau de Sarıalan.", pin: "Bursa Teleferik Teferrüç İstasyonu", url: "https://www.google.com/maps/search/?api=1&query=Bursa+Teleferik+Teferruc+Istasyonu" }
+            ]
+          },
+          spring: {
+            day: 7,
+            title: "Jour 7 (Printemps) : Lac de Sapanca, Maşukiye & Parc d'Ormanya",
+            subtitle: "Van Privé Mercedes Vito · Village Hobbit d'Ormanya · Déjeuner à Maşukiye · Lac de Sapanca",
+            bestTime: "08:30 – 19:30",
+            stroller: "9,5/10 — Sentiers forestiers pavés & promenade plate au bord du lac",
+            kidsTip: "Le parc d'Ormanya abrite de charmantes maisonnettes de Hobbit et un parc animalier gratuit avec daims, alpagas et poneys.",
+            routeUrl: "https://www.google.com/maps/dir/Besiktas,+Istanbul/Ormanya+Dogal+Yasam+Parki,+Kocaeli/Masukiye+Selale+Restoranlari,+Kocaeli/Sapanca+Golu+Sahili,+Sakarya",
+            stops: [
+              { time: "08:30", name: "Départ de l'Hôtel en Van Privé Mercedes Vito", desc: "Trajet confortable d'1h30 porte-à-porte avec chauffeur, sièges enfants et grand coffre pour les poussettes.", pin: "Sapanca Gölü, Sakarya", url: "https://www.google.com/maps/search/?api=1&query=Sapanca+Lake+Sakarya" },
+              { time: "10:15", name: "Parc Naturel d'Ormanya & Village des Hobbits", desc: "Promenade facile en poussette au cœur du plus grand parc naturel d'Europe et de ses maisons féeriques.", pin: "Ormanya Doğal Yaşam Parkı, Kartepe", url: "https://www.google.com/maps/search/?api=1&query=Ormanya+Dogal+Yasam+Parki+Kocaeli" },
+              { time: "13:00", name: "Déjeuner au Bord des Cascades de Maşukiye", desc: "Truite au four en plat de terre cuite, fromage fondu et pain de maïs chaud sur des tables au-dessus des ruisseaux.", pin: "Maşukiye Vadi Restaurant, Kartepe", url: "https://www.google.com/maps/search/?api=1&query=Masukiye+Vadi+Restaurant+Kocaeli" },
+              { time: "15:30", name: "Promenade au Bord du Lac de Sapanca", desc: "Balade plate de 2 km le long des rives paisibles du lac de Sapanca avant le retour en fin d'après-midi à Istanbul.", pin: "Sapanca Gölü Sahil Yürüyüş Yolu", url: "https://www.google.com/maps/search/?api=1&query=Sapanca+Golu+Sahil+Yuruyus+Yolu" }
+            ]
+          }
+        },
+        shops: [
+          { name: "Zorlu Center", cat: "Luxury Malls", badge: "Tunnel Direct Métro M2 Gayrettepe", desc: "Chanel, Dior, Louis Vuitton, Apple Store, Eataly, espaces bébés VIP, salle de prière et grande aire de jeux extérieure.", addr: "Zorlu Center, Gayrettepe, Beşiktaş", url: "https://www.google.com/maps/search/?api=1&query=Zorlu+Center+Istanbul" },
+          { name: "İstinyePark", cat: "Luxury Malls", badge: "Avenue de Créateurs en Plein Air", desc: "Chanel, Hermès, Vakko, Beymen, ainsi que le marché gourmand traditionnel Pazaryeri au niveau inférieur.", addr: "İstinyePark AVM, Sarıyer", url: "https://www.google.com/maps/search/?api=1&query=IstinyePark+Istanbul" },
+          { name: "Kanyon & Vadistanbul", cat: "Luxury Malls", badge: "Métro M2 Levent & Monorail Forêt", desc: "Mall architectural à ciel ouvert Kanyon à Levent M2 et boulevard commerçant Vadistanbul en lisière de forêt.", addr: "Kanyon AVM, Levent, İstanbul", url: "https://www.google.com/maps/search/?api=1&query=Kanyon+AVM+Levent+Istanbul" },
+          { name: "Cevahir Mall", cat: "Family & High-Street", badge: "Accès Direct Métro M2 Şişli", desc: "6 étages de grandes enseignes familiales : LC Waikiki, Defacto, Panço, ebebek, Mothercare et détaxe immédiate.", addr: "İstanbul Cevahir AVM, Şişli", url: "https://www.google.com/maps/search/?api=1&query=Istanbul+Cevahir+AVM+Sisli" },
+          { name: "Forum Istanbul", cat: "Family & High-Street", badge: "Aquarium Sea Life & Decathlon", desc: "Abrite le grand tunnel sous-marin Sea Life Aquarium, Legoland, un immense Decathlon et IKEA.", addr: "Forum İstanbul AVM, Bayrampaşa", url: "https://www.google.com/maps/search/?api=1&query=Forum+Istanbul+Bayrampasa" },
+          { name: "Pente de Sirkeci & Mahmutpaşa", cat: "Wholesale Textiles", badge: "Coton Turc 100% & Linge de Maison", desc: "Artère historique de vente en gros et détail : pyjamas enfants en coton bio, serviettes de Bursa et draps (à descendre).", addr: "Mahmutpaşa Yokuşu, Eminönü", url: "https://www.google.com/maps/search/?api=1&query=Mahmutpasa+Yokusu+Eminonu+Istanbul" },
+          { name: "Quartier Textile de Laleli & Merter", cat: "Wholesale Textiles", badge: "Mode Modeste & Manteaux Cachemire", desc: "Robes élégantes, manteaux en laine/cachemire et tenues de cérémonie enfants (accueil en français et arabe).", addr: "Ordu Caddesi, Laleli, Fatih", url: "https://www.google.com/maps/search/?api=1&query=Laleli+Ordu+Caddesi+Fatih+Istanbul" },
+          { name: "Kafkas Jewellery & Topkapı Mücevherat", cat: "Grand Bazaar Artisans", badge: "Poinçon Officiel Or 18K/22K Certifié", desc: "Haute joaillerie, or turc et pierres précieuses sur l'allée principale Kalpakçılar Cad. (n° 4–6) avec certificat officiel.", addr: "Kapalıçarşı, Kalpakçılar Cad. No: 4-6", url: "https://www.google.com/maps/search/?api=1&query=Kafkas+Jewellery+Kalpakcilar+Grand+Bazaar+Istanbul" },
+          { name: "Sait Aslı Gümüş & Şalabi Antik", cat: "Grand Bazaar Artisans", badge: "Argent Massif .925 & Antiquités Ottomanes", desc: "Plateaux à thé en argent martelé à la main dans le caravansérail Kalcılar Han et pièces ottomanes à İç Bedesten.", addr: "Kalcılar Han & İç Bedesten, Kapalıçarşı", url: "https://www.google.com/maps/search/?api=1&query=Kalcilar+Han+Kapalicarsi+Istanbul" },
+          { name: "Koç Leather & Fur + Punto Leather & Fur", cat: "Grand Bazaar Artisans", badge: "Cuir d'Agneau & Peau Lainée Certifiés", desc: "Vestes en cuir souple et manteaux réversibles en peau lainée sur mesure (Kürkçüler Çarşısı n° 22–46 et Porte plate Gate 47).", addr: "Kapalıçarşı Nuruosmaniye Kapısı Gate 47", url: "https://www.google.com/maps/search/?api=1&query=Punto+Leather+Nuruosmaniye+Grand+Bazaar+Istanbul" }
+        ]
+      },
+
+      ma: {
+        brand: "دليل إسطنبول للعائلة",
+        nav: ["برنامج 7 أيام", "فين تسكنو", "التقدية والمولات", "المواصلات والخريطة", "السلامة والتحضير"],
+        winterBtn: "❄️ الشتاء والثلج",
+        springBtn: "🌸 الربيع والطبيعة",
+        eyebrow: "نسخة خاصة للعائلة المغربية · مريحة للپوسيط (Stroller) · الماكلة حلال 100%",
+        heroTitle: "دليل إسطنبول المميز: برنامج 7 أيام للعائلة",
+        seasonSummary: {
+          winter: "نسخة الشتاء: باطويات البوسفور مدفيين، البازارات المغطية، وخرجة بالتليفريك للثلج فـ جبل أولوداغ (بورصة).",
+          spring: "نسخة الربيع: ورود التوليب فـ جرادي إميرغان وكولهانه، جو ربيعي زوين على البحر، وغداء وسط الشلالات والطبيعة فـ صبنجة ومعشوقية."
+        },
+        searchPlaceholder: "قلّب بسهولة (مثلاً: كومبير، ذهب، جلد، پوسيط، ميترو M2، صيدلية)...",
+        sec1Title: "برنامج 7 أيام (نهار بنهار)",
+        sec1Sub: "ورك على النهار لي بغيتي. النهار السابع كيتبدل بوحدو على حساب واش ختاريتي الشتاء ولا الربيع.",
+        sec2Title: "فين تسكنو (أحسن الأحياء للعائلة)",
+        sec2Sub: "مقارنة بين 3 ديال الأحياء المزيانين للعائلات من ناحية الطريق للپوسيط وقرب المواصلات.",
+        sec3Title: "دليل التقدية والأسواق",
+        sec3Sub: "اختار ما بين المولات الفاخرة، المولات العائلية، تقدية القطن التركي بالجملة، والحرايفية الموثوقين فـ كراند بازار.",
+        sec4Title: "المواصلات وقانون إسطنبول كارت",
+        sec4Sub: "الطرامواي والميترو بالسانسور، الباطويات، التطبيقات الضرورية، والمواقع الرسمية.",
+        sec5Title: "صحة الوليدات و الليستة ديال السفر",
+        sec5Sub: "صيدليات الحراسة بالليل (Nöbetçi Eczane)، المطاعم الحلال بلا كحول، نصائح للپوسيط، والحجز قبل السفر.",
+        printBtn: "🖨️ طبع / خزّن PDF",
+        routeBtn: "شوف الطريق فـ Google Maps ↗",
+        specBestTime: "أحسن وقت للزيارة",
+        specStroller: "الراحة بالپوسيط (Stroller)",
+        specKids: "نصيحة للوليدات",
+        copyBtn: "نسخ",
+        copyTaxiBtn: "نسخ العنوان للطاكسي",
+        copyAddrBtn: "نسخ العنوان",
+        copiedToast: "تنسخ: ",
+        mapBtn: "الخريطة ↗",
+        gmapsBtn: "Google Maps ↗",
+        dayLabel: "النهار",
+        snowShort: " · ثلج",
+        springShort: " · ربيع",
+        kartTag: "القاعدة الذهبية ديال المواصلات",
+        kartTitle: "كارطة وحدة (Istanbulkart) كتكفي العائلة كاملة — دوزوها واحد بواحد.",
+        kartDesc: "شريو كارطة وحدة ديال إسطنبول كارت من الماكينات الصفرين/الزرقين (Biletmatik). دوز الكارطة المرة اللولة ودخّل الپوسيط من الباب العريض، ومن بعد مدّ نفس الكارطة للطرف الثاني يدوز بيها. <strong>الوليدات لي قل من 6 سنين كيركبو فابور 100%.</strong>",
+        appsTitle: "التطبيقات الضرورية فـ التيليفون",
+        portalsTitle: "المواقع الرسمية ديال المواصلات",
+        checkHeading: "شنو خاصكم تحجزو قبل ما تسافرو",
+        shopCats: {
+          "All": "الكل",
+          "Luxury Malls": "المولات الفاخرة",
+          "Family & High-Street": "مولات العائلة والماركات",
+          "Wholesale Textiles": "القطن والملابس بالجملة",
+          "Grand Bazaar Artisans": "حرايفية كراند بازار الموثوقين"
+        },
+        baseCamps: [
+          {
+            badge: "أحسن اختيار شامل وساهل فـ المشي · 9.5/10 للپوسيط",
+            name: "بشيكتاش (Beşiktaş)",
+            sub: "Akaretler · Vişnezade · Yıldız",
+            bullets: [
+              "طريق مسطحة على البحر من قصر دولما بهجة حتى لأورتاكوي بلا دروج.",
+              "باطويات (Ferry) مباشرين للجهة الآسيوية (كاديكوي وأوسكودار).",
+              "حداه جردة يلدز بارك الكبيرة (بلايص اللعب للدراري الصغار والقهيوات)."
+            ],
+            pin: "Beşiktaş İskelesi, Akaretler, İstanbul",
+            url: "https://www.google.com/maps/search/?api=1&query=Akaretler+Besiktas+Istanbul"
+          },
+          {
+            badge: "أحسن نقطة للميترو والسانسور · 9.0/10 للپوسيط",
+            name: "غايريتيبي / بلمومجو (Gayrettepe)",
+            sub: "Zorlu Center Hub",
+            bullets: [
+              "ممر تحت الأرض مغطي ومباشر لخط الميترو الأخضر M2 بلا شتاء ولا برد.",
+              "سانسورات كبار ومول زورلو سنتر الفاخر وفيه ألعاب للوليدات.",
+              "شقق فندقية عائلية جديدة وواسعة فيها الكوزينة مجهزة."
+            ],
+            pin: "Zorlu Center, Gayrettepe, Beşiktaş",
+            url: "https://www.google.com/maps/search/?api=1&query=Zorlu+Center+Istanbul"
+          },
+          {
+            badge: "حي راقي وهادئ وسط الخضورة · 7.8/10 للپوسيط",
+            name: "أولوس / إتيلير (Ulus / Etiler)",
+            sub: "Ulus Park · Nispetiye",
+            bullets: [
+              "حي كالم وراقي الفوق كيطّل على مضيق البوسفور بمنظر واعر.",
+              "قريب لقهيوات أولوس بارك ومول أكمركز (Akmerkez) العائلي.",
+              "كيحتاج طاكسي قصير بـ BiTaksi/Uber ولا ميترو Levent باش تهبط للمدينة القديمة."
+            ],
+            pin: "Ulus Parkı, Beşiktaş, İstanbul",
+            url: "https://www.google.com/maps/search/?api=1&query=Ulus+Parki+Istanbul"
+          }
+        ],
+        transitCards: [
+          {
+            tag: "بلا دروج — ركوب مسطح",
+            title: "طرامواي T1 والفونيكولير F1 / F2",
+            desc: "<strong>طرامواي T1</strong> كيربط كاباتاش، كاراكوي، إيمينونو، سلطان أحمد، وكراند بازار بلا حتى درجة. استعملو <strong>الفونيكولير F1 (كاباتاش–تقسيم)</strong> و <strong>F2 Tünel (كاراكوي–غلطة)</strong> باش تطلعو العقبة فـ 90 ثانية بلا تمارة."
+          },
+          {
+            tag: "سانسورات وباطويات عراض",
+            title: "ميترو M2 وباطويات Şehir Hatları",
+            desc: "<strong>الميترو الأخضر M2</strong> فيه سانسورات كبار كيديو نيشان لمول جواهر، زورلو سنتر، كانيون، وإستينيا بارك. <strong>باطويات المدينة (Şehir Hatları)</strong> كتدخل فيهم بالپوسيط نيشان بلا ما تطويها."
+          }
+        ],
+        apps: [
+          { name: "BiTaksi & Uber", desc: "طاكسيات رسميين بالكونطور وفانات مرسيدس Vito عائليين", label: "BiTaksi ↗", url: "https://www.bitaksi.com/en/" },
+          { name: "Getir", desc: "كيجيب ليك ليكوش، الحليب، الما والسقاطة للأوطيل فـ 15 دقيقة", label: "Getir ↗", url: "https://getir.com/en/" },
+          { name: "Citymapper & Google Maps", desc: "توقيت الميترو والباطويات (خدّم Wheelchair mode للسانسور)", label: "Citymapper ↗", url: "https://citymapper.com/istanbul" }
+        ],
+        safetyCards: [
+          {
+            tagClass: "tag-amber",
+            tag: "طوارئ: عيّط لـ 112",
+            title: "صيدلية الحراسة 24/7 (Nöbetçi Eczane)",
+            desc: "قلّب على البلاكة الحمراء مكتوب فيها <strong>\"E\" (Eczane)</strong> إلا بغيتي دوا السخانة للدراري (Calpol/Dolven). من مور 7 د العشية ونهار الأحد، أي صيدلية سادّة كتعلق شاشة ضاوية فيها عنوان أقرب صيدلية حراسة <strong>Nöbetçi Eczane</strong> حالة بالليل.",
+            linkLabel: "شوف صيدليات الحراسة المفتوحين دابا ↗",
+            linkUrl: "https://www.istanbuleczaciodasi.org.tr/nobetci-eczane/"
+          },
+          {
+            tagClass: "tag-green",
+            tag: "حلال 100% مضمون",
+            title: "الماكلة الحلال وبيوت الصلاة (Mescit)",
+            desc: "اللحم والدجاج فـ تركيا كلو <strong>حلال 100%</strong> أصلاً. المطاعم العائلية المشهورة لي مافيهاش الكحول نهائياً فـ هاد البرنامج هي: <strong>Tarihi Sultanahmet Köftecisi</strong>، <strong>Emirgan Sütiş</strong>، <strong>Çiya Sofrası</strong>، و<strong>Karaköy Güllüoğlu</strong>. وجميع المولات فيهم <strong>مسجد (Mescit)</strong> نقي وبلاصة الرضاعة."
+          },
+          {
+            tagClass: "",
+            tag: "نصائح الپوسيط",
+            title: "الزناقي الحجر والعقابي",
+            desc: "بلوكي الرويضات القداميين ديال الپوسيط فـ الساحات المرصفة بالحجر فـ سلطان أحمد. دخلو لكراند بازار من الباب المسطح <strong>Gate 47 (Nuruosmaniye)</strong>، وهبطو هبطة محمود باشا <em>من الفوق لتحت</em> جيهة إيمينونو."
+          }
+        ],
+        checklist: [
+          { title: "حجز تذاكر قصر دولما بهجة وتوبكابي (+ الحريم)", desc: "حجزوهم من قبل مع الدليل الصوتي باش ما تشدوش الصف الصباح مع الدراري." },
+          { title: "حجز التوقيت ديال برج غلطة (Galata Tower)", desc: "حجزو وقت الطلوع للبرج فـ النهار الخامس بالنهار قبل." },
+          { title: "فـ الشتاء: حجز باطو BUDO السريع لبورصة (ذهاب وإياب)", desc: "الباطو من Eminönü/Kabataş لـ Mudanya باش تطلعو لثلج جبل أولوداغ." },
+          { title: "فـ الربيع: حجز فان مرسيدس Vito خاص لصبنجة ومعشوقية", desc: "طريق ديال ساعة ونص من الباب للباب لـ Ormanya ومعشوقية وصبنجة." }
+        ],
+        days: [
+          {
+            day: 1,
+            title: "النهار 1: الوصول، الراحة وتفويجة فـ ساحل أورتاكوي",
+            subtitle: "كورنيش أورتاكوي · جامع المجيدية الكبير · كومبير ووافل · عشاء فـ أكاريتلير",
+            bestTime: "14:30 – 20:30",
+            stroller: "9.5/10 — طريق البحر مسطحة كاملة وساهلة",
+            kidsTip: "خليو الوليدات يختارو التعميرة ديال بطاطا كومبير (الفرماج، الذرة، الزيتون، الصوصيص الحلال) ويتفرجو فـ الباطويات.",
+            routeUrl: "https://www.google.com/maps/dir/Besiktas+Meydan,+Istanbul/Ortakoy+Mosque,+Istanbul/Akaretler+Siraevler,+Istanbul",
+            stops: [
+              { time: "14:00", name: "الوصول والدخول للأوطيل (Check-In)", desc: "ارتاحو فـ بشيكتاش أو غايريتيبي؛ تقدرو تطلبو الما والحليب وليكوش من تطبيق Getir يوصلوكم فـ 15 دقيقة.", pin: "Beşiktaş Meydan, İstanbul", url: "https://www.google.com/maps/search/?api=1&query=Besiktas+Istanbul" },
+              { time: "16:00", name: "تمشية بالپوسيط فـ أورتاكوي وجامع المجيدية", desc: "ساحة زوينة ومسطحة على البوسفور تحت القنطرة المعلقة، وزيارة جامع أورتاكوي التاريخي على الما.", pin: "Büyük Mecidiye Camii, Ortaköy", url: "https://www.google.com/maps/search/?api=1&query=Buyuk+Mecidiye+Mosque+Ortakoy+Istanbul" },
+              { time: "17:15", name: "بطاطا كومبير (Kumpir) ووافل على البحر", desc: "ذوقو الكومبير المشهور فـ أورتاكوي مخلوط بالزبدة والفرماج والتعميرة، ومن بعد وافل سخون بالفواكه والشكلاط.", pin: "Ortaköy Kumpircileri, Beşiktaş", url: "https://www.google.com/maps/search/?api=1&query=Ortakoy+Kumpir+Istanbul" },
+              { time: "19:00", name: "عشاء عائلي فـ أكاريتلير (Akaretler)", desc: "عشاء حلال وهادئ فـ المطاعم العائلية وسط البنايات العثمانية المضوية ديال Akaretler.", pin: "Akaretler Sıraevler, Beşiktaş", url: "https://www.google.com/maps/search/?api=1&query=Akaretler+Siraevler+Besiktas+Istanbul" }
+            ]
+          },
+          {
+            day: 2,
+            title: "النهار 2: قلب سلطان أحمد وجرادي كولهانه",
+            subtitle: "آيا صوفيا · الجامع الأزرق · كفتة سلطان أحمد التاريخية · كراند بازار · جردة كولهانه",
+            bestTime: "09:00 – 17:30",
+            stroller: "8.2/10 — ركبو فـ طرامواي T1 وبلوكيو الرويضات القداميين",
+            kidsTip: "مور الغداء هبطو لجردة كولهانه (Gülhane Park)، بلاصة خضراء ومسطحة بلا طوموبيلات يجريو فيها الدراري.",
+            routeUrl: "https://www.google.com/maps/dir/Hagia+Sophia,+Istanbul/Blue+Mosque,+Istanbul/Tarihi+Sultanahmet+Koftecisi+Selim+Usta,+Istanbul/Grand+Bazaar,+Istanbul/Gulhane+Park,+Istanbul",
+            stops: [
+              { time: "09:15", name: "مسجد آيا صوفيا الكبير (Ayasofya)", desc: "سيرو بكري قبل الزحام؛ الپوسيط كتحط فـ البلاصة المخصصة حدا العساس فـ الدخلة ودخلو بحمالة البيبي.", pin: "Ayasofya Camii, Sultanahmet", url: "https://www.google.com/maps/search/?api=1&query=Hagia+Sophia+Istanbul" },
+              { time: "11:00", name: "الجامع الأزرق (Sultanahmet Camii) والميدان", desc: "قطعو الساحة المسطحة لزيارة الجامع الأزرق المشهور بـ 6 د الصومعات والزليج الأزرق ديال إزنيك.", pin: "Sultan Ahmet Camii, Fatih", url: "https://www.google.com/maps/search/?api=1&query=Blue+Mosque+Istanbul" },
+              { time: "12:30", name: "الغداء فـ Tarihi Sultanahmet Köftecisi (من 1920)", desc: "مطعم عائلي تاريخي (حلال 100% وبلا كحول) كيقدم كفتة مشوية رطبة كيعشقوها الصغار مع سلطة اللوبيا والحلوى بالسميدة.", pin: "Tarihi Sultanahmet Köftecisi Selim Usta", url: "https://www.google.com/maps/search/?api=1&query=Tarihi+Sultanahmet+Koftecisi+Selim+Usta" },
+              { time: "14:00", name: "كراند بازار (الدخول من باب Nuruosmaniye Gate 47 المسطح)", desc: "جولة فـ الشارع الرئيسي المغطي (Kalpakçılar) عند الحرايفية الموثوقين ديال الذهب والنقرة والجلد.", pin: "Kapalıçarşı Nuruosmaniye Kapısı", url: "https://www.google.com/maps/search/?api=1&query=Nuruosmaniye+Gate+Grand+Bazaar+Istanbul" },
+              { time: "16:15", name: "جردة كولهانه السلطانية (Gülhane Park)", desc: "تمشية مريحة بالپوسيط وسط الأشجار العالية والورود حتى لمحطة طرامواي Gülhane.", pin: "Gülhane Parkı, Fatih", url: "https://www.google.com/maps/search/?api=1&query=Gulhane+Park+Istanbul" }
+            ]
+          },
+          {
+            day: 3,
+            title: "النهار 3: قصر توبكابي، سوق الثواب والبقلاوة فـ كاراكوي",
+            subtitle: "قصر توبكابي والحريم · سوق محمود باشا للقطن · قنطرة غلطة · بقلاوة كولوغلو",
+            bestTime: "09:00 – 18:00 (توبكابي كيسد الثلاث)",
+            stroller: "7.8/10 — هبطو زنقة محمود باشا من الفوق لتحت جيهة البحر",
+            kidsTip: "فـ Karaköy Güllüoğlu طلبو للدراري 'Soğuk Baklava' (بقلاوة باردة بالحليب والشكلاط) مع البقلاوة السخونة بالفستق.",
+            routeUrl: "https://www.google.com/maps/dir/Topkapi+Palace+Museum,+Istanbul/Mahmutpasa+Yokusu,+Istanbul/Galata+Bridge,+Istanbul/Karakoy+Gulluoglu,+Istanbul",
+            stops: [
+              { time: "09:00", name: "قصر توبكابي وقسم الحريم السلطاني", desc: "اكتشفو الساحات الخضراء ديال السلاطين، غرفة الأمانات المقدسة، والحريم بالتذاكر المحجوزة من قبل.", pin: "Topkapı Sarayı Müzesi", url: "https://www.google.com/maps/search/?api=1&query=Topkapi+Palace+Museum+Istanbul" },
+              { time: "13:00", name: "سوق سيركجي ومحمود باشا للقطن والملابس بالجملة", desc: "هبطو مع الطريق التجارية المشهورة باش تشريو بيجامات وحوايج القطن التركي 100% للدراري، والفوطات ديال بورصة بأثمنة الجملة.", pin: "Mahmutpaşa Yokuşu, Eminönü", url: "https://www.google.com/maps/search/?api=1&query=Mahmutpasa+Yokusu+Eminonu+Istanbul" },
+              { time: "15:30", name: "تمشية فـ الطبقة التحتانية ديال قنطرة غلطة", desc: "قطعو من إيمينونو لكاراكوي على رجلين فـ الممر التحتاني الواسع ديال القنطرة وتفرجو فـ الباطويات والصيادة.", pin: "Galata Köprüsü, Karaköy", url: "https://www.google.com/maps/search/?api=1&query=Galata+Bridge+Istanbul" },
+              { time: "16:30", name: "بقلاوة كاراكوي كولوغلو (Karaköy Güllüoğlu)", desc: "أشهر وأقدم دار بقلاوة فـ إسطنبول (من 1949)؛ صالة واسعة للپوسيط وكيديرو بواطات مسدودين مزيان للطيارة.", pin: "Karaköy Güllüoğlu, Kemankeş Cad.", url: "https://www.google.com/maps/search/?api=1&query=Karakoy+Gulluoglu+Istanbul" }
+            ]
+          },
+          {
+            day: 4,
+            title: "النهار 4: شمال البوسفور ومول إستينيا بارك الفاخر",
+            subtitle: "فطور تركي فـ Emirgan Sütiş · جردة إميرغان · بوريك ساريير · İstinyePark",
+            bestTime: "09:30 – 19:00",
+            stroller: "9.4/10 — رصيف البحر مسطح ومول فاخر مجهز",
+            kidsTip: "خودو خبزة سيميت (Simit) زايدة من الفطور باش الوليدات يوكّلو طيور النورس على البحر.",
+            routeUrl: "https://www.google.com/maps/dir/Emirgan+Sutis,+Istanbul/Emirgan+Korusu,+Istanbul/Tarihi+Sariyer+Borekcisi,+Istanbul/Istinye+Park,+Istanbul",
+            stops: [
+              { time: "09:30", name: "فطور تركي تقليدي طويل فـ Emirgan Sütiş", desc: "فطور على البحر مباشرة فيه القشطة البلدية (Kaymak) مع العسل الحر، الفرماج، أتاي تركي، والمنمن.", pin: "Emirgan Sütiş, Sarıyer", url: "https://www.google.com/maps/search/?api=1&query=Emirgan+Sutis+Istanbul" },
+              { time: "11:15", name: "جردة إميرغان والتمشية حدا القصور الخشبية (Yalı)", desc: "تفويجة فـ جردة إميرغان وتفرجو فـ الديور والقصور العثمانية الخشبية المطلة على البوسفور.", pin: "Emirgan Korusu, Sarıyer", url: "https://www.google.com/maps/search/?api=1&query=Emirgan+Park+Istanbul" },
+              { time: "13:15", name: "تاريخي ساريير بوريكتيسي (Tarihi Sarıyer Börekçisi)", desc: "ذوقو البوريك التركي الأصلي المورق بالفرماج، السبانخ، ولا الكفتة (وكاين بوريك حلو بالسكر كلاصي للوليدات).", pin: "Tarihi Sarıyer Börekçisi", url: "https://www.google.com/maps/search/?api=1&query=Tarihi+Sariyer+Borekcisi+Istanbul" },
+              { time: "15:00", name: "العشية فـ مول إستينيا بارك (İstinyePark)", desc: "شارع الماركات العالمية فـ الهواء الطلق، سوق الماكلة التقليدي (Pazaryeri)، وغرف ملكية لرضاعة الأطفال والصلاة.", pin: "İstinyePark AVM, Sarıyer", url: "https://www.google.com/maps/search/?api=1&query=IstinyePark+Istanbul" }
+            ]
+          },
+          {
+            day: 5,
+            title: "النهار 5: قصر دولما بهجة، برج غلطة وكورنيش غلطة بورت",
+            subtitle: "Dolmabahçe Palace · طرامواي الاستقلال · Galata Tower · Galataport",
+            bestTime: "09:00 – 20:00 (دولما بهجة كيسد الاثنين)",
+            stroller: "8.8/10 — ركبو الفونيكولير F1/F2 باش تفاداو العقبة",
+            kidsTip: "كورنيش Galataport طويل (1.2 كلم) على البحر وممنوع فيه الطوموبيلات نهائياً، آمن بزاف للدراري الصغار.",
+            routeUrl: "https://www.google.com/maps/dir/Dolmabahce+Palace,+Istanbul/Taksim+Square,+Istanbul/Galata+Tower,+Istanbul/Galataport+Istanbul",
+            stops: [
+              { time: "09:00", name: "قصر دولما بهجة (Dolmabahçe Palace)", desc: "جرادي مسطحين على البوسفور، البوابات الملكية، وقاعة الاحتفالات لي فيها أكبر ثريا ديال الكريستال.", pin: "Dolmabahçe Sarayı, Beşiktaş", url: "https://www.google.com/maps/search/?api=1&query=Dolmabahce+Palace+Istanbul" },
+              { time: "12:15", name: "فونيكولير F1 والطرامواي الأحمر فـ شارع الاستقلال", desc: "طلعو بـ F1 من كاباتاش لتقسيم فـ جوج دقايق، وهبطو مع شارع الاستقلال الواسع جيهة غلطة.", pin: "İstiklal Caddesi, Beyoğlu", url: "https://www.google.com/maps/search/?api=1&query=Istiklal+Caddesi+Beyoglu+Istanbul" },
+              { time: "14:30", name: "برج غلطة (Galata Tower — بالحجز المسبق)", desc: "طلعو بالسانسور لقمة البرج التاريخي باش تشوفو منظر بانورامي 360 درجة على إسطنبول كاملة.", pin: "Galata Kulesi, Beyoğlu", url: "https://www.google.com/maps/search/?api=1&query=Galata+Tower+Istanbul" },
+              { time: "17:00", name: "كورنيش ومطاعم غلطة بورت (Galataport)", desc: "تمشية مسطحة على الما وعشاء عائلي قدام المنظر المضوي ديال جوامع سلطان أحمد.", pin: "Galataport İstanbul, Karaköy", url: "https://www.google.com/maps/search/?api=1&query=Galataport+Istanbul" }
+            ]
+          },
+          {
+            day: 6,
+            title: "النهار 6: الباطو للجهة الآسيوية، كاديكوي وجرادي مودا",
+            subtitle: "أوسكودار وبرج الفتاة · سوق كاديكوي · غداء فـ Çiya Sofrası · ساحل مودا",
+            bestTime: "10:00 – 18:30",
+            stroller: "9.2/10 — باطويات مريحين وكورنيش مودا مسطح",
+            kidsTip: "جرادي مودا (Moda) على البحر فيهم الكازو وألعاب الدراري ولاكلاص البلدي بحليب الماعز.",
+            routeUrl: "https://www.google.com/maps/dir/Uskudar+Ferry+Terminal,+Istanbul/Kiz+Kulesi,+Istanbul/Ciya+Sofrasi,+Kadikoy,+Istanbul/Moda+Sahil+Parki,+Kadikoy,+Istanbul",
+            stops: [
+              { time: "10:00", name: "الباطو لأوسكودار والتمشية قدام برج الفتاة (Kız Kulesi)", desc: "ركبو فـ باطو Şehir Hatları من بشيكتاش (12 دقيقة) وتمشاو فـ ساحل Salacak المسطح قدام جزيرة برج الفتاة.", pin: "Kız Kulesi Salacak Sahili, Üsküdar", url: "https://www.google.com/maps/search/?api=1&query=Salacak+Kiz+Kulesi+Uskudar+Istanbul" },
+              { time: "12:15", name: "سوق كاديكوي التقليدي (Kadıköy Çarşı)", desc: "جولة فـ الزناقي ديال العسل الحر، الفواكه الجافة، الزيتون، والحلقوم التركي الأصيل.", pin: "Kadıköy Tarihi Çarşı", url: "https://www.google.com/maps/search/?api=1&query=Kadikoy+Carsisi+Istanbul" },
+              { time: "13:15", name: "غداء أناضولي أصيل فـ مطعم Çiya Sofrası", desc: "مطعم الشاف موسى داغديفيرين العالمي (حلال 100% وبلا كحول) كيقدم طواجن ومشويات تقليدية من جنوب تركيا.", pin: "Çiya Sofrası, Kadıköy", url: "https://www.google.com/maps/search/?api=1&query=Ciya+Sofrasi+Kadikoy+Istanbul" },
+              { time: "15:15", name: "جردة وكورنيش مودا (Moda Sahil Parkı)", desc: "تمشية على البحر فـ الجرادي وألعاب الأطفال، والرجوع بالباطو مع الغروب لبشيكتاش.", pin: "Moda Sahil Parkı, Kadıköy", url: "https://www.google.com/maps/search/?api=1&query=Moda+Sahil+Parki+Kadikoy+Istanbul" }
+            ]
+          }
+        ],
+        day7: {
+          winter: {
+            day: 7,
+            title: "النهار 7 (الشتاء): ثلج جبل أولوداغ وتاريخ بورصة",
+            subtitle: "باطو BUDO · الجامع الكبير وخان الحرير · إسكندر كباب الأصلي · تليفريك الثلج",
+            bestTime: "08:00 – 20:30",
+            stroller: "8.0/10 — الپوسيط لي كتطوى كتدخل فـ كابينة التليفريك",
+            kidsTip: "تقدرو تكريو زلاجات البلاستيك (Kızak) للوليدات حدا محطة التليفريك الفوق فـ Sarıalan باش يلعبو فـ الثلج.",
+            routeUrl: "https://www.google.com/maps/dir/Eminonu+BUDO+Pier,+Istanbul/Mudanya+BUDO+Iskelesi,+Bursa/Bursa+Ulu+Camii/Koza+Han,+Bursa/Bursa+Teleferik+Teferruc+Istasyonu",
+            stops: [
+              { time: "08:30", name: "باطو BUDO السريع (من Eminönü/Kabataş لـ Mudanya)", desc: "رحلة بحرية مريحة ومدفية (ساعة و50 دقيقة) لبورصة مع بلايص جالسين وبلاصة للپوسيط.", pin: "BUDO Eminönü İskelesi", url: "https://budo.burulas.com.tr/" },
+              { time: "11:00", name: "الجامع الكبير فـ بورصة (Ulu Camii) وخان الحرير (Koza Han)", desc: "زيارة الجامع التاريخي (من 1399) وشريان شالات الحرير الطبيعي فـ ساحة كوزا هان مع كاس د أتاي.", pin: "Koza Han, Osmangazi, Bursa", url: "https://www.google.com/maps/search/?api=1&query=Koza+Han+Bursa" },
+              { time: "12:45", name: "الغداء: إسكندر كباب الأصلي ديال بورصة", desc: "ذوقو إسكندر كباب فـ بلاصتو الأصلية باللحم المشوي على العواد، صوص مطيشة، الياغورت البلدي والزبدة السخونة.", pin: "Kebapçı İskender Tarihi Ahşap Dükkan, Bursa", url: "https://www.google.com/maps/search/?api=1&query=Kebapci+Iskender+Tarihi+Ahsap+Dukkan+Bursa" },
+              { time: "14:30", name: "تليفريك بورصة (Bursa Teleferik) لثلج جبل أولوداغ", desc: "طلعة بانورامية فـ الكابينة المسدودة فوق غابات الصنوبر المثلجة حتى لـ Sarıalan للعب فـ الثلج وشرب السحلب السخون.", pin: "Bursa Teleferik Teferrüç İstasyonu", url: "https://www.google.com/maps/search/?api=1&query=Bursa+Teleferik+Teferruc+Istasyonu" }
+            ]
+          },
+          spring: {
+            day: 7,
+            title: "النهار 7 (الربيع): بحيرة صبنجة، شلالات معشوقية وغابة أورمانيا",
+            subtitle: "مرسيدس Vito خاص · غابة الهوبيت Ormanya · غداء فوق الواد فـ معشوقية · بحيرة صبنجة",
+            bestTime: "08:30 – 19:30",
+            stroller: "9.5/10 — ممرات الغابة مبلطة وكورنيش البحيرة مسطح",
+            kidsTip: "غابة Ormanya فيها ديور الهوبيت الصغار وحديقة حيوانات فابور فيها الغزلان والخيول الصغار للوليدات.",
+            routeUrl: "https://www.google.com/maps/dir/Besiktas,+Istanbul/Ormanya+Dogal+Yasam+Parki,+Kocaeli/Masukiye+Selale+Restoranlari,+Kocaeli/Sapanca+Golu+Sahili,+Sakarya",
+            stops: [
+              { time: "08:30", name: "الانطلاق بفان مرسيدس Vito خاص من الأوطيل", desc: "طريق مريحة ديال ساعة ونص مع شيفور خاص وكراسى الأطفال والپوسيط فـ الكوفر.", pin: "Sapanca Gölü, Sakarya", url: "https://www.google.com/maps/search/?api=1&query=Sapanca+Lake+Sakarya" },
+              { time: "10:15", name: "المحمية الطبيعية وقرية الهوبيت فـ أورمانيا (Ormanya)", desc: "تمشية بالپوسيط وسط الطبيعة الخلابة، ديور الهوبيت، والحيوانات الأليفة لي كيعجبو الدراري.", pin: "Ormanya Doğal Yaşam Parkı, Kartepe", url: "https://www.google.com/maps/search/?api=1&query=Ormanya+Dogal+Yasam+Parki+Kocaeli" },
+              { time: "13:00", name: "الغداء فوق الما والشلالات فـ معشوقية (Maşukiye)", desc: "طاجين الحوت (ترويت) ولا اللحم والفرماج فـ الفخار فوق طبالي الخشب وسط الواد والشجر.", pin: "Maşukiye Vadi Restaurant, Kartepe", url: "https://www.google.com/maps/search/?api=1&query=Masukiye+Vadi+Restaurant+Kocaeli" },
+              { time: "15:30", name: "كورنيش بحيرة صبنجة (Lake Sapanca)", desc: "تمشية مسطحة وهادئة على ضفة البحيرة مع قهيوات وجلسات عائلية قبل الرجوع لإسطنبول.", pin: "Sapanca Gölü Sahil Yürüyüş Yolu", url: "https://www.google.com/maps/search/?api=1&query=Sapanca+Golu+Sahil+Yuruyus+Yolu" }
+            ]
+          }
+        },
+        shops: [
+          { name: "Zorlu Center", cat: "Luxury Malls", badge: "ممر مباشر من ميترو Gayrettepe M2", desc: "Chanel, Dior, Louis Vuitton, Apple Store, Eataly، مع غرف فاخرة للرضاعة والصلاة وألعاب للأطفال.", addr: "Zorlu Center, Gayrettepe, Beşiktaş", url: "https://www.google.com/maps/search/?api=1&query=Zorlu+Center+Istanbul" },
+          { name: "İstinyePark", cat: "Luxury Malls", badge: "شارع الماركات العالمية والسوق التقليدي", desc: "Chanel, Hermès, Vakko, Beymen، زائد البازار التحتاني (Pazaryeri) ديال التوابل والحلويات الفاخرة.", addr: "İstinyePark AVM, Sarıyer", url: "https://www.google.com/maps/search/?api=1&query=IstinyePark+Istanbul" },
+          { name: "Kanyon & Vadistanbul", cat: "Luxury Malls", badge: "ميترو Levent M2 ومونوراي الغابة", desc: "مول كانيون المفتوح فـ Levent، ومول فادي إسطنبول حدا غابة بلغراد بالنافورات الراقصة.", addr: "Kanyon AVM, Levent, İstanbul", url: "https://www.google.com/maps/search/?api=1&query=Kanyon+AVM+Levent+Istanbul" },
+          { name: "Cevahir Mall (مول جواهر)", cat: "Family & High-Street", badge: "دخلة مباشرة من ميترو Şişli M2", desc: "6 د الطبقات ديال الماركات العائلية: LC Waikiki, Defacto, Panço, ebebek, Mothercare مع استرجاع الضريبة (Tax-Free).", addr: "İstanbul Cevahir AVM, Şişli", url: "https://www.google.com/maps/search/?api=1&query=Istanbul+Cevahir+AVM+Sisli" },
+          { name: "Forum Istanbul", cat: "Family & High-Street", badge: "أكواريوم Sea Life و Decathlon الكبير", desc: "فيه أكواريوم الحوت الكبير للوليدات، Legoland، ديكاتلون لبواط وحوايج الشتاء، و IKEA.", addr: "Forum İstanbul AVM, Bayrampaşa", url: "https://www.google.com/maps/search/?api=1&query=Forum+Istanbul+Bayrampasa" },
+          { name: "Sirkeci & Mahmutpaşa Slope", cat: "Wholesale Textiles", badge: "القطن التركي 100% والفوطات بالجملة", desc: "أحسن بلاصة لتقدية بيجامات وحوايج القطن للدراري، فوطات الحمام ديال بورصة، وغطاوات الناموسية بأثمنة الجملة.", addr: "Mahmutpaşa Yokuşu, Eminönü", url: "https://www.google.com/maps/search/?api=1&query=Mahmutpasa+Yokusu+Eminonu+Istanbul" },
+          { name: "Laleli & Merter District", cat: "Wholesale Textiles", badge: "الأزياء المحتشمة والمونطوات", desc: "كسوات ومونطوات الكاشمير والصوف، وحوايج المناسبات للوليدات (الناس تما كيهضرو بالعربية والفرنسية).", addr: "Ordu Caddesi, Laleli, Fatih", url: "https://www.google.com/maps/search/?api=1&query=Laleli+Ordu+Caddesi+Fatih+Istanbul" },
+          { name: "Kafkas Jewellery & Topkapı Mücevherat", cat: "Grand Bazaar Artisans", badge: "ذهب عيار 18 و 22 مضمون ومختوم", desc: "مجوهرات الذهب والأحجار الكريمة فـ الشارع الرئيسي Kalpakçılar Cad. (رقم 4–6) بشهادة رسمية.", addr: "Kapalıçarşı, Kalpakçılar Cad. No: 4-6", url: "https://www.google.com/maps/search/?api=1&query=Kafkas+Jewellery+Kalpakcilar+Grand+Bazaar+Istanbul" },
+          { name: "Sait Aslı Gümüş & Şalabi Antik", cat: "Grand Bazaar Artisans", badge: "نقرة 925 حرة وتحف عثمانية أصلية", desc: "صواني وبرادات النقرة المنقوشة باليد فـ خان الصاغة (Kalcılar Han) وتحف قديمة فـ İç Bedesten.", addr: "Kalcılar Han & İç Bedesten, Kapalıçarşı", url: "https://www.google.com/maps/search/?api=1&query=Kalcilar+Han+Kapalicarsi+Istanbul" },
+          { name: "Koç Leather & Fur + Punto Leather & Fur", cat: "Grand Bazaar Artisans", badge: "جلد الخروف الحر والفرو الطبيعي", desc: "جاكيتات الجلد الرطب والمونطوات ببطانة الفرو (مع التقياس وتصليح القياس فـ نفس النهار) فـ Gate 47.", addr: "Kapalıçarşı Nuruosmaniye Kapısı Gate 47", url: "https://www.google.com/maps/search/?api=1&query=Punto+Leather+Nuruosmaniye+Grand+Bazaar+Istanbul" }
+        ]
+      }
+    };
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang === 'ma' ? 'ar-MA' : (lang === 'fr' ? 'fr' : 'en');
+      document.documentElement.dir = lang === 'ma' ? 'rtl' : 'ltr';
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('lang-fr').classList.toggle('active', lang === 'fr');
+      document.getElementById('lang-ma').classList.toggle('active', lang === 'ma');
+      renderAll();
+    }
+
+    function setSeason(season) {
+      currentSeason = season;
+      document.getElementById('btn-winter').classList.toggle('active', season === 'winter');
+      document.getElementById('btn-spring').classList.toggle('active', season === 'spring');
+      renderAll();
+    }
+
+    function renderAll() {
+      const t = I18N[currentLang];
+
+      document.getElementById('ui-brand').textContent = t.brand;
+      document.getElementById('nav-itinerary').textContent = t.nav[0];
+      document.getElementById('nav-stay').textContent = t.nav[1];
+      document.getElementById('nav-shopping').textContent = t.nav[2];
+      document.getElementById('nav-transit').textContent = t.nav[3];
+      document.getElementById('nav-safety').textContent = t.nav[4];
+
+      document.getElementById('btn-winter').textContent = t.winterBtn;
+      document.getElementById('btn-spring').textContent = t.springBtn;
+
+      document.getElementById('ui-eyebrow').textContent = t.eyebrow;
+      document.getElementById('ui-hero-title').textContent = t.heroTitle;
+      document.getElementById('season-summary').textContent = t.seasonSummary[currentSeason];
+      document.getElementById('search-input').placeholder = t.searchPlaceholder;
+
+      document.getElementById('ui-sec1-title').textContent = t.sec1Title;
+      document.getElementById('ui-sec1-sub').textContent = t.sec1Sub;
+      document.getElementById('ui-sec2-title').textContent = t.sec2Title;
+      document.getElementById('ui-sec2-sub').textContent = t.sec2Sub;
+      document.getElementById('ui-sec3-title').textContent = t.sec3Title;
+      document.getElementById('ui-sec3-sub').textContent = t.sec3Sub;
+      document.getElementById('ui-sec4-title').textContent = t.sec4Title;
+      document.getElementById('ui-sec4-sub').textContent = t.sec4Sub;
+      document.getElementById('ui-sec5-title').textContent = t.sec5Title;
+      document.getElementById('ui-sec5-sub').textContent = t.sec5Sub;
+      document.getElementById('ui-print-btn').textContent = t.printBtn;
+
+      document.getElementById('ui-kart-tag').textContent = t.kartTag;
+      document.getElementById('ui-kart-title').textContent = t.kartTitle;
+      document.getElementById('ui-kart-desc').innerHTML = t.kartDesc;
+      document.getElementById('ui-apps-title').textContent = t.appsTitle;
+      document.getElementById('ui-portals-title').textContent = t.portalsTitle;
+      document.getElementById('ui-check-heading').textContent = t.checkHeading;
+
+      renderDays();
+      renderBaseCamps();
+      renderShops();
+      renderTransitAndSafety();
+    }
+
+    function renderDays() {
+      const t = I18N[currentLang];
+      const allDays = [...t.days, t.day7[currentSeason]];
+      const tabsEl = document.getElementById('day-tabs');
+      tabsEl.innerHTML = allDays.map(d => `
+        <button type="button" class="pill-tab ${d.day === currentDay ? 'active' : ''}" onclick="selectDay(${d.day})">
+          ${t.dayLabel} ${d.day}${d.day === 7 ? (currentSeason === 'winter' ? t.snowShort : t.springShort) : ''}
+        </button>
+      `).join('');
+
+      const active = allDays.find(d => d.day === currentDay) || allDays[0];
+      const container = document.getElementById('day-card-container');
+      container.innerHTML = `
+        <article class="card">
+          <div class="day-header">
+            <div>
+              <h3 class="day-title">${active.title}</h3>
+              <p class="day-sub">${active.subtitle}</p>
+            </div>
+            <a class="btn-primary" href="${active.routeUrl}" target="_blank" rel="noopener">
+              ${t.routeBtn}
+            </a>
+          </div>
+
+          <div class="spec-strip">
+            <div class="spec-box">
+              <span class="spec-label">${t.specBestTime}</span>
+              <div class="spec-value">${active.bestTime}</div>
+            </div>
+            <div class="spec-box">
+              <span class="spec-label">${t.specStroller}</span>
+              <div class="spec-value" style="color:var(--green);">${active.stroller}</div>
+            </div>
+            <div class="spec-box">
+              <span class="spec-label">${t.specKids}</span>
+              <div class="spec-value">${active.kidsTip}</div>
+            </div>
+          </div>
+
+          <div style="margin-top:8px;">
+            ${active.stops.map(s => `
+              <div class="stop-row">
+                <div class="stop-main">
+                  <span class="stop-time">${s.time}</span>
+                  <div>
+                    <div class="stop-name">${s.name}</div>
+                    <div class="stop-desc">${s.desc}</div>
+                  </div>
+                </div>
+                <div class="stop-actions">
+                  <button type="button" class="btn-soft" onclick="copyText('${s.pin.replace(/'/g, "\\'")}')">${t.copyBtn}</button>
+                  <a class="btn-soft" style="color:var(--blue); font-weight:600;" href="${s.url}" target="_blank" rel="noopener">${t.mapBtn}</a>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </article>
+      `;
+    }
+
+    function selectDay(dayNum) {
+      currentDay = dayNum;
+      renderDays();
+    }
+
+    function renderBaseCamps() {
+      const t = I18N[currentLang];
+      document.getElementById('stay-grid').innerHTML = t.baseCamps.map((c, idx) => `
+        <article class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <span class="tag ${idx === 0 ? 'tag-green' : ''}">${c.badge}</span>
+            <h3 style="font-size:20px; font-weight:700; margin-top:10px;">${c.name}</h3>
+            <p style="font-size:12px; color:var(--secondary);">${c.sub}</p>
+            <ul class="clean-list">
+              ${c.bullets.map(b => `<li>${b}</li>`).join('')}
+            </ul>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding-top:12px; border-top:1px solid var(--border);">
+            <button class="btn-soft" onclick="copyText('${c.pin.replace(/'/g, "\\'")}')">${t.copyTaxiBtn}</button>
+            <a class="btn-link" href="${c.url}" target="_blank" rel="noopener">${t.gmapsBtn}</a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderShops() {
+      const t = I18N[currentLang];
+      const cats = ['All', 'Luxury Malls', 'Family & High-Street', 'Wholesale Textiles', 'Grand Bazaar Artisans'];
+      document.getElementById('shop-tabs').innerHTML = cats.map(c => `
+        <button type="button" class="pill-tab ${c === currentShopCat ? 'active' : ''}" onclick="selectShopCat('${c}')">
+          ${t.shopCats[c]}
+        </button>
+      `).join('');
+
+      const list = currentShopCat === 'All' ? t.shops : t.shops.filter(s => s.cat === currentShopCat);
+      document.getElementById('shop-grid').innerHTML = list.map(s => `
+        <article class="card" style="display:flex; flex-direction:column; justify-content:space-between; gap:14px;">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:8px; flex-wrap:wrap;">
+              <span class="tag">${t.shopCats[s.cat]}</span>
+              <span class="tag tag-green">✓ ${s.badge}</span>
+            </div>
+            <h3 style="font-size:18px; font-weight:700;">${s.name}</h3>
+            <p style="font-size:13px; color:var(--secondary); margin-top:6px;">${s.desc}</p>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding-top:12px; border-top:1px solid var(--border);">
+            <button type="button" class="btn-soft" onclick="copyText('${s.addr.replace(/'/g, "\\'")}')">${t.copyAddrBtn}</button>
+            <a class="btn-link" href="${s.url}" target="_blank" rel="noopener">${t.gmapsBtn}</a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function selectShopCat(cat) {
+      currentShopCat = cat;
+      renderShops();
+    }
+
+    function renderTransitAndSafety() {
+      const t = I18N[currentLang];
+
+      document.getElementById('transit-cards').innerHTML = t.transitCards.map(tc => `
+        <div class="card">
+          <span class="tag tag-green">${tc.tag}</span>
+          <h3 style="font-size:18px; font-weight:700; margin-top:8px;">${tc.title}</h3>
+          <p style="font-size:13px; color:var(--secondary); margin-top:4px;">${tc.desc}</p>
+        </div>
+      `).join('');
+
+      document.getElementById('apps-list').innerHTML = t.apps.map(a => `
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
+          <span><strong>${a.name}</strong> — ${a.desc}</span>
+          <a class="btn-link" style="white-space:nowrap;" href="${a.url}" target="_blank" rel="noopener">${a.label}</a>
+        </div>
+      `).join('');
+
+      document.getElementById('safety-cards').innerHTML = t.safetyCards.map(sc => `
+        <div class="card">
+          <span class="tag ${sc.tagClass}">${sc.tag}</span>
+          <h3 style="font-size:17px; font-weight:700; margin-top:8px;">${sc.title}</h3>
+          <p style="font-size:13px; color:var(--secondary); margin-top:6px;">${sc.desc}</p>
+          ${sc.linkUrl ? `<div style="margin-top:12px;"><a class="btn-link" href="${sc.linkUrl}" target="_blank" rel="noopener">${sc.linkLabel}</a></div>` : ''}
+        </div>
+      `).join('');
+
+      document.getElementById('checklist-grid').innerHTML = t.checklist.map(ch => `
+        <label class="check-item" onclick="this.classList.toggle('done')">
+          <input type="checkbox" />
+          <div>
+            <div class="check-title">${ch.title}</div>
+            <div class="check-desc">${ch.desc}</div>
+          </div>
+        </label>
+      `).join('');
+    }
+
+    function handleSearch(query) {
+      const box = document.getElementById('search-results');
+      const q = query.trim().toLowerCase();
+      if (!q) {
+        box.style.display = 'none';
+        box.innerHTML = '';
+        return;
+      }
+
+      const t = I18N[currentLang];
+      const allDays = [...t.days, t.day7[currentSeason]];
+      const results = [];
+
+      allDays.forEach(d => {
+        d.stops.forEach(s => {
+          if ((s.name + ' ' + s.desc + ' ' + s.pin).toLowerCase().includes(q)) {
+            results.push({ label: `${t.dayLabel} ${d.day}`, title: s.name, desc: s.desc, url: s.url });
+          }
+        });
+      });
+
+      t.shops.forEach(s => {
+        if ((s.name + ' ' + s.cat + ' ' + s.desc + ' ' + s.badge).toLowerCase().includes(q)) {
+          results.push({ label: t.shopCats[s.cat], title: s.name, desc: s.desc, url: s.url });
+        }
+      });
+
+      box.style.display = 'block';
+      if (results.length === 0) {
+        box.innerHTML = `<div class="card" style="padding:16px; font-size:13px; color:var(--secondary);">No matches found / ما لقينا حتى نتيجة لـ "${query}".</div>`;
+        return;
+      }
+
+      box.innerHTML = `
+        <div class="card" style="padding:20px;">
+          ${results.slice(0, 6).map((r, i) => `
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; padding:10px 0; ${i > 0 ? 'border-top:1px solid var(--border);' : ''}">
+              <div>
+                <span class="tag" style="margin-inline-end:6px;">${r.label}</span>
+                <strong style="font-size:14px;">${r.title}</strong>
+                <div style="font-size:12px; color:var(--secondary); margin-top:2px;">${r.desc}</div>
+              </div>
+              <a class="btn-link" style="white-space:nowrap;" href="${r.url}" target="_blank" rel="noopener">${t.mapBtn}</a>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function copyText(txt) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).catch(() => {});
+      }
+      const toast = document.getElementById('toast');
+      toast.textContent = I18N[currentLang].copiedToast + txt;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    }
+
+    renderAll();
+  </script>
+</body>
+</html>
